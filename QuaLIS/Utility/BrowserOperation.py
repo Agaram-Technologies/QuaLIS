@@ -57,6 +57,33 @@ def launchLIMS():
                         print("Clicked the login button")
 
 
+                        i=0
+                        while i<1:
+                            title = driver.current_url
+                            print(title)
+                            if title=="http://192.168.0.199:9091/QuaLISWeb/#/home":
+                                print("satisified")
+                                break
+                            else:
+                                BasicOperation.clear(driver, objectRepository.get("login", "loginid"),
+                                                             )
+                                BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
+                                                             configDriver.get("Credential", "loginid"))
+
+                                BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
+                                                             configDriver.get("Credential", "password"))
+
+                                BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
+
+                                print("not satisfied")
+
+
+                            time.sleep(1)
+                            i=i+1
+
+
+
+
                     except Exception as e:
                         LogOperation.logError("Tried to click the login button, It causes exception" + str(e))
 
