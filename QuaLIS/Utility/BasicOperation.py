@@ -48,3 +48,10 @@ def projectDirectory():
     return projectDirectory
 
 projectDirectory()
+
+
+
+
+def elementByText(driver,text):
+    driver.find_element(By.XPATH,"//*[text()='{}']".format(text)).click()
+

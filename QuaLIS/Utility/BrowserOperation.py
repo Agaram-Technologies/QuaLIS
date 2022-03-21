@@ -19,87 +19,87 @@ objectRepository.read(projectDirectory+"\\ObjectRepository\\ElementLogin.ini")
 
 
 def launchLIMS():
+    driver = webdriver.Chrome(executable_path="..\chromedriver.exe")
+    LogOperation.logInfo("Browser Launched")
+    print("Browser Launched")
+    driver.maximize_window()
+    driver.implicitly_wait(20)
+    driver.get(configDriver.get("Credential", "link"))
+    LogOperation.logInfo("Link was hit")
+    print("Link was hit")
 
-    try:
-        driver = webdriver.Chrome(executable_path="..\chromedriver.exe")
-        LogOperation.logInfo("Browser Launched")
-        print("Browser Launched")
-        driver.maximize_window()
-        driver.implicitly_wait(20)
+    BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
+                                 configDriver.get("Credential", "loginid"))
+    LogOperation.logInfo("Entered Login id")
+    print("Entered Login id")
 
-        try:
-            driver.get(configDriver.get("Credential", "link"))
-            LogOperation.logInfo("Link was hit")
-            print("Link was hit")
+    BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
 
-            try:
-                BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
-                                             configDriver.get("Credential", "loginid"))
-                LogOperation.logInfo("Entered Login id")
-                print("Entered Login id")
+    BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
+                                 configDriver.get("Credential", "password"))
+    LogOperation.logInfo("Entered password id")
 
-                try:
+    print("Entered password id")
 
-                    time.sleep(4)
-                    BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
 
-                    BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
-                                                 configDriver.get("Credential", "password"))
-                    LogOperation.logInfo("Entered password id")
+    BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
 
-                    print("Entered password id")
+    LogOperation.logInfo("Clicked the login button")
 
-                    try:
-                        time.sleep(3)
-                        BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
-                        LogOperation.logInfo("Clicked the login button")
+    print("Clicked the login button")
 
-                        print("Clicked the login button")
+    time.sleep(5)
 
-                    i = 0
-                    while i < 1:
-                        title = driver.current_url
-                        print(title)
-                        if title == "http://192.168.0.199:9091/QuaLISWeb/#/home":
-                            print("satisified")
-                            break
-                        else:
-                            BasicOperation.clear(driver, objectRepository.get("login", "loginid"),
-                                                 )
-                            BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
-                                                         configDriver.get("Credential", "loginid"))
+    url = driver.current_url
 
-                            BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
+    if url == "http://192.168.0.199:9091/QuaLISWeb/#/home":
+        print("logged in")
+    else:
+         BasicOperation.clear(driver, objectRepository.get("login", "loginid"))
+         BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
+                                  configDriver.get("Credential", "loginid"))
+
+         BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
+
+         BasicOperation.clear(driver, objectRepository.get("login", "password"))
+         BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
                                                          configDriver.get("Credential", "password"))
+         LogOperation.logInfo("Entered password id")
 
-                            BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
+         print("Entered password id")
 
-                            print("not satisfied")
+         time.sleep(1)
 
-                        time.sleep(1)
-                        i = i + 1
+         #BasicOperation.clickXpath(driver, objectRepository.get("login", "userRole"))
 
+         driver.find_element(By.XPATH, "//*[@id='nusermultirolecode']").click()
 
+         BasicOperation.elementByText(driver, "Admin")
 
+         driver.find_element(By.XPATH, "//*[@id='nlogintypecode']").click()
 
-                    except Exception as e:
-                        LogOperation.logError("Tried to click the login button, It causes exception" + str(e))
+         BasicOperation.elementByText(driver, "Internal")
 
-                except Exception as e:
-                    LogOperation.logError("Tried to enter the login id, It causes exception" + str(e))
-
-            except Exception as e:
-                LogOperation.logError("Tried to enter the login id, It causes exception" + str(e))
-
-        except Exception as e:
-            LogOperation.logError("Unable to hit the application, It causes exception" + str(e))
-
-
-
-    except Exception as e:
-        LogOperation.logError("Browser is not Launched, It caused exception " + str(e))
+         BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
 
     return driver
 
 
-launchLIMS()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
