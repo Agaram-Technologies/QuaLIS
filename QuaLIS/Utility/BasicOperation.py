@@ -55,3 +55,26 @@ projectDirectory()
 def elementByText(driver,text):
     driver.find_element(By.XPATH,"//*[text()='{}']".format(text)).click()
 
+
+
+def getText(driver,xpath):
+   text= driver.find_element(By.XPATH,xpath).text
+   return text
+
+
+
+def auditTrailCount(text):
+
+    textList=text.split(' ')
+
+    count=len(textList)-1
+
+    return int(count)
+
+
+
+
+
+
+
+

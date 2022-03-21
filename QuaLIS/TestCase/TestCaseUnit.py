@@ -1,17 +1,14 @@
-import os
-import time
-from configparser import ConfigParser
-
 from TestCoverage import TestCoverageUnit
 from Utility import BrowserOperation, BasicOperation
 
+name="murali"
 
 
 driver=BrowserOperation.launchLIMS()
 
-TestCoverageUnit.unitAdd(driver,"d","dd")
+#TestCoverageUnit.unitAdd(driver,name,"dd")
 
-#TestCoverageUnit.unitDelete(driver,"d")
+TestCoverageUnit.unitDelete(driver,name)
 
 
 

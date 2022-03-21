@@ -3,7 +3,7 @@ from configparser import ConfigParser
 
 from selenium.webdriver.common.by import By
 
-from Utility import BasicOperation, ScreenNavigate
+from Utility import BasicOperation, ScreenNavigate, BrowserOperation
 from Utility.BrowserOperation import configDriver
 baseMaster=ConfigParser()
 baseMaster.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementBaseMaster.ini")
@@ -21,13 +21,14 @@ def unitAdd(driver,name,description):
     BasicOperation.clickXpath(driver,
                               baseMaster.get("UnitOfMeasurement", "unitAddSubmit"))
 
-
+    BrowserOperation.refreshLogin(driver)
 
 
 def unitEdit(driver):
     ScreenNavigate.unit(driver)
 
 def unitDelete(driver,name):
+    ScreenNavigate.unit(driver)
     unitNameList = driver.find_elements(By.XPATH,
                                         "/html/body/div[1]/div/div[2]/div/div[2]/div/div/div/div[2]/div/div[3]/div/div[1]/table/tbody/tr/td[1]")
 
@@ -49,6 +50,25 @@ def unitDelete(driver,name):
 
     time.sleep(3)
 
-    BasicOperation.clickXpath(driver, configDriver.get("UnitOfMeasurement", "UnitDeleteConfirmationOK"))
+    BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "UnitDeleteConfirmationOK"))
+
+    time.sleep(7)
+
+    q = driver.find_elements(By.TAG_NAME, "tr")
+    qq = len(q)
+
+    # input("enter containertype with description: ")
+    container = "vial + syringe"
+    for i in range(1, qq):
+        qqq = q[i].text
+        print(qqq)
+        if container == qqq:
+            print("containertype count is", i, qqq)
+            print(i)
+            m = str(i)
+            delete = "(//span[@data-tip='Delete'])[" + m + "]"
+            print(delete)
+            driver.find_element(By.XPATH, delete).click()
+            break
 
 
