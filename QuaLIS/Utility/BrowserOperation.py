@@ -33,6 +33,8 @@ def launchLIMS():
     LogOperation.logInfo("Entered Login id")
     print("Entered Login id")
 
+    time.sleep(2)
+
     BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
 
     BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
@@ -41,6 +43,7 @@ def launchLIMS():
 
     print("Entered password id")
 
+    time.sleep(2)
 
     BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
 

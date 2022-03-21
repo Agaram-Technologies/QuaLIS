@@ -1,13 +1,28 @@
 import time
+from configparser import ConfigParser
 
 from selenium.webdriver.common.by import By
 
 from Utility import BasicOperation, ScreenNavigate
 from Utility.BrowserOperation import configDriver
-
+baseMaster=ConfigParser()
+baseMaster.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementBaseMaster.ini")
 
 def unitAdd(driver,name,description):
     ScreenNavigate.unit(driver)
+
+    BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "unitAdd"))
+
+    BasicOperation.sendKeysXpath(driver, baseMaster.get("UnitOfMeasurement", "unitName"), name)
+
+    BasicOperation.sendKeysXpath(driver, baseMaster.get("UnitOfMeasurement", "unitDescription"),
+                                 description)
+
+    BasicOperation.clickXpath(driver,
+                              baseMaster.get("UnitOfMeasurement", "unitAddSubmit"))
+
+
+
 
 def unitEdit(driver):
     ScreenNavigate.unit(driver)
