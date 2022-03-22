@@ -1,16 +1,18 @@
 from TestCoverage import TestCoverageUnit, TestCoverageAudittrail
 from Utility import BrowserOperation, BasicOperation
 
-name="murali"
+name="cm4"
 
-description="murali"
+description="cm1"
 
 
 driver=BrowserOperation.launchLIMS()
 
+
+
 TestCoverageUnit.auditTrailUnitAdd(driver,name,description)
 
-TestCoverageUnit.unitDelete(driver,name)
+#TestCoverageUnit.unitDelete(driver,name)
 
 
 

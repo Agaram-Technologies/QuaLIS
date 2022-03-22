@@ -1,5 +1,7 @@
 from configparser import ConfigParser
 
+from selenium.webdriver.common.by import By
+
 from Utility import ScreenNavigate, BrowserOperation, BasicOperation
 
 auditTrail=ConfigParser()
@@ -10,18 +12,24 @@ auditTrail.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementUs
 
 def auditTrailRecordCount(driver):
 
-    ScreenNavigate.auditTrail(driver)
+    ScreenNavigate.auditTrailPreCondition(driver)
 
-    countText= BasicOperation.getText( auditTrail.get("AuditTrail", "countText"))
+    countText= driver.find_element(By.XPATH,"(//*[@class='k-pager-info k-label'])[2]").text
 
-    count=BasicOperation.auditTrailCount(countText)
+    print(countText)
 
-    print(count)
+    individualText=countText.split(' ')
+
+    count=individualText[4]
+
+    count=int(count)
+
+    ScreenNavigate.auditTrailPostCondition(driver)
 
     return count
 
 
 
 
-driver=BrowserOperation.launchLIMS()
+
 

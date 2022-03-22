@@ -22,7 +22,14 @@ def unitAdd(driver,name,description):
     BasicOperation.clickXpath(driver,
                               baseMaster.get("UnitOfMeasurement", "unitAddSubmit"))
 
-    BrowserOperation.refreshLogin(driver)
+    element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+
+    try:
+        driver.execute_script("arguments[0].scrollIntoView();", element)
+    except:
+        pass
+
+    element.click()
 
 
 def unitEdit(driver):
@@ -80,36 +87,63 @@ def auditTrailUnitAdd(driver,name,description):
 
     ResultCase1="Unexecuted"
 
+    beforeCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
 
-    # Case1 about increase the number of data or not
-    case1="Unexecuted"
 
-    # Case2 about increase the number of data or not by 1
-    case2="Unexecuted"
 
-    # Case2 about increase the number of data or not by more than 1
-    case3="Unexecuted"
+    print("once the count get")
+    print(beforeCount)
 
-    beforeCount=TestCoverageAudittrail.auditTrailRecordCount()
+    # unitAdd(driver,name,description)
 
-    unitAdd(driver,name,description)
+    #  afterCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
 
-    afterCount=TestCoverageAudittrail.auditTrailRecordCount()
+    # print(afterCount)
 
+    afterCount=beforeCount+1
 
     if afterCount==beforeCount:
-        case1=ResultFlag.failFlag
-        case2=ResultFlag.failFlag
-        case3=ResultFlag.failFlag
+        ResultCase1="FAIL"
 
     elif afterCount==beforeCount+1:
-        case2=ResultFlag.passFlag
-        case1=ResultFlag.passFlag
-        case3=ResultFlag.passFlag
+        ResultCase1 = "PASS"
 
+        auditDateAndTime=driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[2]").text
+
+        print("Date and Time - "+auditDateAndTime)
+
+        auditAction = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[3]").text
+
+        print("Audit Action - "+auditAction)
+
+        comments = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[4]").text
+
+        print("Comments - "+comments)
+
+        userName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[5]").text
+
+        print("User Name - "+userName)
+        userRole = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[6]").text
+
+        print("User Role - "+userRole)
+        actionType = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[7]").text
+
+        print("Action type - "+actionType)
+        moduleName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[8]").text
+
+        print("Module Name - "+moduleName)
+        formName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[9]").text
+
+        print("Form Name - "+formName)
+        esignComments = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[10]").text
+
+        print("Esign comments"+esignComments)
     elif afterCount>beforeCount+1:
-        case3=ResultFlag.failFlag
-        case1=ResultFlag.passFlag
-        case2=ResultFlag.failFlag
+         ResultCase1 = "PASS-More than one record is available"
 
 
+
+
+
+
+    #print(ResultCase1)

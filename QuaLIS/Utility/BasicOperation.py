@@ -1,17 +1,19 @@
 import os
 from datetime import datetime
 
+import time
+
 from selenium.webdriver.common.by import By
 
 
-def time():
+def timet():
     currentsysdatetime = datetime.today()
     usrsysdatetime = currentsysdatetime.strftime("%d/%m/%Y %H:%M:%S")
     print(usrsysdatetime+"")
     return usrsysdatetime
 
 def clickXpath(driver,xpath):
-    driver.find_element(By.XPATH,xpath).click()
+   driver.find_element(By.XPATH,xpath).click()
 
 def sendKeysXpath(driver,xpath,value):
     driver.find_element(By.XPATH,xpath).send_keys(value)
@@ -76,7 +78,14 @@ def auditTrailCount(text):
 
 
 
+def scrollClickXpath(driver,xpath):
+   element=driver.find_element(By.XPATH,xpath).click()
 
+   driver.execute_script("arguments[0].scrollIntoView();", element)
+
+   time.sleep(2)
+
+   element.click()
 
 
 

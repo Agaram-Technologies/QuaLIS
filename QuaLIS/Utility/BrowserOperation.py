@@ -23,7 +23,7 @@ def launchLIMS():
     LogOperation.logInfo("Browser Launched")
     print("Browser Launched")
     driver.maximize_window()
-    driver.implicitly_wait(20)
+    driver.implicitly_wait(50)
     driver.get(configDriver.get("Credential", "link"))
     LogOperation.logInfo("Link was hit")
     print("Link was hit")
@@ -51,39 +51,14 @@ def launchLIMS():
 
     print("Clicked the login button")
 
-    time.sleep(5)
+    try:
 
-    url = driver.current_url
+         BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
 
-    if url == "http://192.168.0.199:9091/QuaLISWeb/#/home":
-        print("logged in")
-    else:
-         BasicOperation.clear(driver, objectRepository.get("login", "loginid"))
-         BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
-                                  configDriver.get("Credential", "loginid"))
-
-         BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
-
-         BasicOperation.clear(driver, objectRepository.get("login", "password"))
-         BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
-                                                         configDriver.get("Credential", "password"))
-         LogOperation.logInfo("Entered password id")
-
-         print("Entered password id")
-
-         time.sleep(1)
-
-         #BasicOperation.clickXpath(driver, objectRepository.get("login", "userRole"))
-
-         driver.find_element(By.XPATH, "//*[@id='nusermultirolecode']").click()
-
-         BasicOperation.elementByText(driver, "Admin")
-
-         driver.find_element(By.XPATH, "//*[@id='nlogintypecode']").click()
-
-         BasicOperation.elementByText(driver, "Internal")
-
-         BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
+    except:
+         print("exception")
+         time.sleep(5)
+         BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
 
     return driver
 
@@ -106,45 +81,23 @@ def refreshLogin(driver):
 
     time.sleep(2)
 
+    driver.find_element(By.XPATH, "//*[@id='nusermultirolecode']").click()
+
+    BasicOperation.elementByText(driver, "Admin")
+
+    driver.find_element(By.XPATH, "//*[@id='nlogintypecode']").click()
+
+    BasicOperation.elementByText(driver, "Internal")
+
+    BasicOperation.clickXpath(driver, objectRepository.get("login", "loginid"))
+
+    BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
+
     BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
 
     LogOperation.logInfo("Clicked the login button")
 
     print("Clicked the login button")
-
-    time.sleep(5)
-
-    url = driver.current_url
-
-    if url == "http://192.168.0.199:9091/QuaLISWeb/#/home":
-        print("logged in")
-    else:
-        BasicOperation.clear(driver, objectRepository.get("login", "loginid"))
-        BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
-                                     configDriver.get("Credential", "loginid"))
-
-        BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
-
-        BasicOperation.clear(driver, objectRepository.get("login", "password"))
-        BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "password"),
-                                     configDriver.get("Credential", "password"))
-        LogOperation.logInfo("Entered password id")
-
-        print("Entered password id")
-
-        time.sleep(1)
-
-        # BasicOperation.clickXpath(driver, objectRepository.get("login", "userRole"))
-
-        driver.find_element(By.XPATH, "//*[@id='nusermultirolecode']").click()
-
-        BasicOperation.elementByText(driver, "Admin")
-
-        driver.find_element(By.XPATH, "//*[@id='nlogintypecode']").click()
-
-        BasicOperation.elementByText(driver, "Internal")
-
-        BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
 
 
 
