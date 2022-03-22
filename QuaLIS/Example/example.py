@@ -1,5 +1,4 @@
+name="murali"
 
-shepherd = "Mary"
-age = 32
-stuff_in_string = "Shepherd {} is {} years old.".format(shepherd, age)
-print(stuff_in_string)
+print("My name is {} ,{}, {},I'm from agaram technologies".format(name,"agaram","reshma"))
+

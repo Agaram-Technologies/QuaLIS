@@ -3,7 +3,8 @@ from configparser import ConfigParser
 
 from selenium.webdriver.common.by import By
 
-from Utility import BasicOperation, ScreenNavigate, BrowserOperation
+from TestCoverage import TestCoverageAudittrail
+from Utility import BasicOperation, ScreenNavigate, BrowserOperation, ResultFlag
 from Utility.BrowserOperation import configDriver
 baseMaster=ConfigParser()
 baseMaster.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementBaseMaster.ini")
@@ -70,5 +71,45 @@ def unitDelete(driver,name):
             print(delete)
             driver.find_element(By.XPATH, delete).click()
             break
+
+
+
+
+
+def auditTrailUnitAdd(driver,name,description):
+
+    ResultCase1="Unexecuted"
+
+
+    # Case1 about increase the number of data or not
+    case1="Unexecuted"
+
+    # Case2 about increase the number of data or not by 1
+    case2="Unexecuted"
+
+    # Case2 about increase the number of data or not by more than 1
+    case3="Unexecuted"
+
+    beforeCount=TestCoverageAudittrail.auditTrailRecordCount()
+
+    unitAdd(driver,name,description)
+
+    afterCount=TestCoverageAudittrail.auditTrailRecordCount()
+
+
+    if afterCount==beforeCount:
+        case1=ResultFlag.failFlag
+        case2=ResultFlag.failFlag
+        case3=ResultFlag.failFlag
+
+    elif afterCount==beforeCount+1:
+        case2=ResultFlag.passFlag
+        case1=ResultFlag.passFlag
+        case3=ResultFlag.passFlag
+
+    elif afterCount>beforeCount+1:
+        case3=ResultFlag.failFlag
+        case1=ResultFlag.passFlag
+        case2=ResultFlag.failFlag
 
 

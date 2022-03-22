@@ -16,6 +16,8 @@ def auditTrailRecordCount(driver):
 
     count=BasicOperation.auditTrailCount(countText)
 
+    print(count)
+
     return count
 
 

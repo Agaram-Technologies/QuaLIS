@@ -57,6 +57,7 @@ def elementByText(driver,text):
 
 
 
+
 def getText(driver,xpath):
    text= driver.find_element(By.XPATH,xpath).text
    return text
@@ -64,6 +65,8 @@ def getText(driver,xpath):
 
 
 def auditTrailCount(text):
+
+
 
     textList=text.split(' ')
 
