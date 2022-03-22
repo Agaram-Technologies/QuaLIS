@@ -83,7 +83,7 @@ def unitDelete(driver,name):
 
 
 
-def auditTrailUnitAdd(driver,name,description):
+def auditTrailUnitAdd(driver,name,description,defaultStatus):
 
     ResultCase1="Unexecuted"
 
@@ -108,6 +108,8 @@ def auditTrailUnitAdd(driver,name,description):
     elif afterCount==beforeCount+1:
         ResultCase1 = "PASS"
 
+        print("Audit trail is captured by")
+
         auditDateAndTime=driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[2]").text
 
         print("Date and Time - "+auditDateAndTime)
@@ -116,7 +118,15 @@ def auditTrailUnitAdd(driver,name,description):
 
         print("Audit Action - "+auditAction)
 
+        if auditAction=="ADD UNIT":
+            print("Audit action is properly mentioned")
+
+        else:
+            print("Audit action is not properly mentioned")
+
         comments = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[4]").text
+
+        expectedComments="Unit Name: {};Description: {};Default Status: {};".format(name,description,)
 
         print("Comments - "+comments)
 
