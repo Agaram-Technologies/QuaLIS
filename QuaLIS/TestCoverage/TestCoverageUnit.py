@@ -17,15 +17,22 @@ def unitAdd(driver,name,description,defaultStatus):
 
     time.sleep(2)
 
-    BasicOperation.clickXpath(driver, )
+    ExceptionHandling.exceptionClick(driver,baseMaster.get("UnitOfMeasurement", "unitAdd"),"Clicked the Unit add button", "Unable to click the unit add button")
+
     time.sleep(2)
-    BasicOperation.sendKeysXpath(driver, baseMaster.get("UnitOfMeasurement", "unitName"), name)
+    ExceptionHandling.exceptionSendKeys(driver, baseMaster.get("UnitOfMeasurement", "unitName"), name,"Entered the unit name", "Unable to enter the unit name")
+
+
     time.sleep(2)
-    BasicOperation.sendKeysXpath(driver, baseMaster.get("UnitOfMeasurement", "unitDescription"),
-                                 description)
+
+    ExceptionHandling.exceptionSendKeys(driver, baseMaster.get("UnitOfMeasurement", "unitDescription"), name,"Entered the unit description", "Unable to enter the unit description")
+
     time.sleep(2)
-    BasicOperation.clickXpath(driver,
-                              baseMaster.get("UnitOfMeasurement", "unitAddSubmit"))
+
+    ExceptionHandling.exceptionClick(driver,
+                              baseMaster.get("UnitOfMeasurement", "unitAddSubmit"),"Clicked the add submit button","unable to click the add submit button")
+
+
     time.sleep(2)
     element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
     time.sleep(2)
