@@ -1,6 +1,8 @@
 import logging
 
-logFolder="C:\\Users\\Administrator\\PycharmProjects\\nibsc\\Log\\"
+from Utility import BasicOperation
+
+logFolder=BasicOperation.projectDirectory()+"\\Report\\Log\\"
 
 def logInfo(info):
     logging.basicConfig(filename=logFolder+"info.log", format='%(asctime)s:%(levelname)s: %(message)s',
@@ -11,7 +13,7 @@ def logInfo(info):
 
 
 def logError(error):
-    logging.basicConfig(filename=logFolder+"Error.log", format='%(asctime)s: %(levelname)s: %(message)s',
+    logging.basicConfig(filename=logFolder+"info.log", format='%(asctime)s: %(levelname)s: %(message)s',
                         datefmt="%m/%d/%Y %I:%M:%S %p", level=logging.ERROR)
     log = logging.getLogger()
 

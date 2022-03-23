@@ -3,7 +3,7 @@ from configparser import ConfigParser
 
 from selenium.webdriver.common.by import By
 
-from Utility import BasicOperation
+from Utility import BasicOperation, LogOperation
 
 baseMaster=ConfigParser()
 baseMaster.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementBaseMaster.ini")
@@ -21,40 +21,99 @@ auditTrail=auditTrail.get("AuditTrail", "auditTrailIcon")
 
 def unit(driver):
 
-    BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "masterIcon"))
+    try:
+        BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "masterIcon"))
 
-    element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+        LogOperation.logInfo("clicked the Master icon")
+    except:
+        LogOperation.logError("Unable to click the Master icon")
 
-    driver.execute_script("arguments[0].scrollIntoView();", element)
+    time.sleep(2)
 
-    element.click()
+    try:
+        element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+
+        driver.execute_script("arguments[0].scrollIntoView();", element)
+
+        time.sleep(2)
+
+        element.click()
+
+        LogOperation.logInfo("clicked the Base Master icon")
+    except:
+        LogOperation.logError("Unable to click the Base Master icon")
+
+
+    time.sleep(2)
 
     try:
 
         BasicOperation.scrollClickXpath(driver, baseMaster.get("UnitOfMeasurement", "unitOfMeasurementIcon"))
-
+        LogOperation.logInfo("clicked the unit icon")
     except:
-        BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "unitOfMeasurementIcon"))
 
+        time.sleep(2)
+        try:
+            BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "unitOfMeasurementIcon"))
+            LogOperation.logInfo("clicked the unit icon")
+        except:
+            LogOperation.logError("Unable to click the unit icon")
 
 def auditTrailPreCondition(driver):
 
-    BasicOperation.clickXpath(driver, master)
+    time.sleep(2)
 
-    BasicOperation.clickXpath(driver, userManagement)
+    try:
+        BasicOperation.clickXpath(driver, master)
 
-    element = driver.find_element(By.XPATH,"//a[@href='#/audittrail' and @nformcode='78' and text()='Audit Trail']")
+        LogOperation.logInfo("clicked the Master icon")
+    except:
+        LogOperation.logError("Unable to click the Master icon")
 
-    driver.execute_script("arguments[0].scrollIntoView();", element)
+
 
     time.sleep(2)
 
-    element.click()
+    try:
+        BasicOperation.clickXpath(driver, userManagement)
+
+        LogOperation.logInfo("clicked the User management icon")
+    except:
+        LogOperation.logError("Unable to click the User management icon")
+
+
+    time.sleep(2)
+
+    try:
+        element = driver.find_element(By.XPATH,
+                                      "//a[@href='#/audittrail' and @nformcode='78' and text()='Audit Trail']")
+
+        driver.execute_script("arguments[0].scrollIntoView();", element)
+
+        time.sleep(2)
+
+        element.click()
+
+        LogOperation.logInfo("clicked the Audit trail icon")
+    except:
+        LogOperation.logError("Unable to click the Audit trail icon")
+
+
 
 
 def auditTrailPostCondition(driver):
-    element = driver.find_element(By.XPATH, userManagement)
 
-    driver.execute_script("arguments[0].scrollIntoView();", element)
+    time.sleep(2)
+    try:
+        element = driver.find_element(By.XPATH, userManagement)
 
-    BasicOperation.clickXpath(driver, userManagement)
+        time.sleep(2)
+        driver.execute_script("arguments[0].scrollIntoView();", element)
+
+        time.sleep(2)
+        BasicOperation.clickXpath(driver, userManagement)
+
+        LogOperation.logInfo("clicked the User management icon")
+    except:
+        LogOperation.logError("Unable to click the User management icon")
+

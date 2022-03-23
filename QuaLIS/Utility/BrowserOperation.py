@@ -55,10 +55,14 @@ def launchLIMS():
 
          BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
 
+         LogOperation.logInfo("Launch lims - Clicked the pin icon")
+
     except:
          print("exception")
          time.sleep(5)
          BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
+
+    LogOperation.logError("Launch lims - Unable to Click the pin icon")
 
     return driver
 
@@ -98,6 +102,20 @@ def refreshLogin(driver):
     LogOperation.logInfo("Clicked the login button")
 
     print("Clicked the login button")
+
+    try:
+
+        BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
+
+        LogOperation.logInfo("Refresh Login-->, clicked pin icon")
+
+    except Exception as e:
+        print("exception")
+        time.sleep(5)
+        BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
+
+        LogOperation.logError("Refresh Login-->, Unable to click the pin icon "+str(e))
+
 
 
 
