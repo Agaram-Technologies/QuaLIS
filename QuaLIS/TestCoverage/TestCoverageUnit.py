@@ -17,8 +17,6 @@ def unitAdd(driver,name,description,defaultStatus):
 
     time.sleep(2)
 
-    ExceptionHandling.exceptionClick(driver,baseMaster.get("UnitOfMeasurement", "unitAdd"),"Clicked the Unit add button", "Unable to click the unit add button")
-
     BasicOperation.clickXpath(driver, )
     time.sleep(2)
     BasicOperation.sendKeysXpath(driver, baseMaster.get("UnitOfMeasurement", "unitName"), name)
