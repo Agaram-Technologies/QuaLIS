@@ -3,6 +3,7 @@ from configparser import ConfigParser
 
 from selenium.webdriver.common.by import By
 
+from ObjectRepository import ElementAuditTrail
 from TestCoverage import TestCoverageAudittrail
 from Utility import BasicOperation, ScreenNavigate, BrowserOperation, ResultFlag, LogOperation, ExceptionHandling
 from Utility.BrowserOperation import configDriver
@@ -28,6 +29,8 @@ def unitAdd(driver,name,description,defaultStatus):
     ExceptionHandling.exceptionSendKeys(driver, baseMaster.get("UnitOfMeasurement", "unitDescription"), name,"Entered the unit description", "Unable to enter the unit description")
 
     time.sleep(2)
+
+
 
     ExceptionHandling.exceptionClick(driver,
                               baseMaster.get("UnitOfMeasurement", "unitAddSubmit"),"Clicked the add submit button","unable to click the add submit button")
@@ -71,6 +74,17 @@ def unitDelete(driver,name,description,defaultStatus):
 
         else:
             print("Not matched")
+
+        time.sleep(2)
+        element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+        time.sleep(2)
+        try:
+            driver.execute_script("arguments[0].scrollIntoView();", element)
+        except:
+            pass
+        time.sleep(2)
+        element.click()
+        time.sleep(2)
 
 
 def unitEdit(driver,oldName,oldDescription,oldDefaultStatus,newName,newDescription):
@@ -126,6 +140,17 @@ def unitEdit(driver,oldName,oldDescription,oldDefaultStatus,newName,newDescripti
         else:
             print("Not matched")
 
+        time.sleep(2)
+        element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+        time.sleep(2)
+        try:
+            driver.execute_script("arguments[0].scrollIntoView();", element)
+        except:
+            pass
+        time.sleep(2)
+        element.click()
+        time.sleep(2)
+
 
 
 
@@ -144,11 +169,25 @@ def auditTrailUnitAdd(driver,name,description,defaultStatus):
 
 
 
-    unitAdd(driver,name,description)
+    unitAdd(driver,name,description,"No")
 
     afterCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
 
-    # print(afterCount)
+    auditActionList=driver.find_elements(By.XPATH, "//tbody[@role='presentation']/tr/td[2]")
+
+    for i in range(0, afterCount-beforeCount):
+        auditAction=auditActionList[i].text
+
+        if auditAction=="UNIT ADD":
+            "//tbody[@role='presentation']/tr{}/td[2]".format(i).text
+
+
+            userRole=ElementAuditTrail.userRole(driver,i).text
+
+
+
+
+
 
 
 
@@ -336,9 +375,264 @@ def unitFilter(driver):
 
         print(len(d))
 
+        driver.find_element(By.XPAPTH, "//*[text()='Does not contain']").click()
+
 
 
 
 #driver=BrowserOperation.launchLIMS()
 
 #unitFilter(driver)
+
+
+
+
+
+def auditTrailUnitEdit(driver,oldName,oldDescription,newName,newDescription,defaultStatus):
+
+    ResultCase1="Unexecuted"
+
+    beforeCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
+
+    print("once the count get")
+    print(beforeCount)
+
+    auditTrailRecord={"AuditAction":"EDIT UNIT","comments":"Unit Name: {}-> {};Description: {}-> ;	".format(oldName,newName,oldDescription),"userName":"Carl Dolman","userRole":"Admin","ActionType":"SYSTEM","ModuleName":"Base Master","FormName":"Unit of Measurement","esignComments":""}
+
+
+    unitEdit(driver,oldName,oldDescription,"No",newName,newDescription)
+
+    BrowserOperation.refreshLogin(driver)
+
+    afterCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
+
+    # print(afterCount)
+
+
+
+    if afterCount==beforeCount:
+        ResultCase1="FAIL"
+
+        print("Audit trail is not captured")
+
+    elif afterCount==beforeCount+1:
+        ResultCase1 = "PASS"
+
+        print("Audit trail is captured")
+
+        auditDateAndTime=driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[2]").text
+
+        print("Date and Time - "+auditDateAndTime)
+
+        auditAction = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[3]").text
+
+        print("Audit Action - "+auditAction)
+
+        if auditAction==auditTrailRecord.get("AuditAction"):
+            print("Audit action is properly mentioned")
+
+        else:
+            print("Audit action is not properly mentioned")
+
+        comments = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[4]").text
+
+        expectedComments=auditTrailRecord.get("comments")
+
+        if comments==expectedComments:
+            print("Comment is properly displayed")
+
+        else:
+            print("Comment is not displaying properly")
+
+        print("Comments - "+comments)
+
+        userName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[5]").text
+
+        expectedUserName=auditTrailRecord.get("userName")
+
+        if userName==expectedUserName:
+            print("user name is properly displayed")
+
+        else:
+            print("user name is not displaying properly")
+
+        print("User Name - "+userName)
+        userRole = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[6]").text
+
+        expectedUserName = auditTrailRecord.get("userRole")
+
+        if userRole == expectedUserName:
+            print("user role is properly displayed")
+
+        else:
+            print("user role is not displaying properly")
+        print("User Role - "+userRole)
+        actionType = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[7]").text
+
+        expectedActionType= auditTrailRecord.get("actionType")
+
+        if actionType == expectedActionType:
+            print("Action type is properly displayed")
+
+        else:
+            print("Action type is not displaying properly")
+
+        print("Action type - "+actionType)
+        moduleName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[8]").text
+
+        expectedModuleName = auditTrailRecord.get("moduleName")
+
+        if expectedModuleName == moduleName:
+            print("Module name  is properly displayed")
+
+        else:
+            print("Module name   is not displaying properly")
+        print("Module Name - "+moduleName)
+        formName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[9]").text
+
+        expectedFormName = auditTrailRecord.get("formName")
+
+        if formName == expectedFormName:
+            print("Form name is properly displayed")
+
+        else:
+            print("Form name is not displaying properly")
+        print("Form Name - "+formName)
+        esignComments = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[10]").text
+        expectedEsignComments = auditTrailRecord.get("esignComments")
+
+        if esignComments == expectedEsignComments:
+            print("Esign comment is properly displayed")
+
+        else:
+            print("AEsign comment  is not displaying properly")
+        print("Esign comments"+esignComments)
+    elif afterCount>beforeCount+1:
+         ResultCase1 = "PASS-More than one record is available"
+
+
+
+
+def auditTrailUnitDelete(driver,name,description,defaultStatus):
+
+    ResultCase1="Unexecuted"
+
+    beforeCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
+
+    print("once the count get")
+    print(beforeCount)
+
+    auditTrailRecord={"AuditAction":"EDIT UNIT","comments":"Unit Name: {};Description: {};Default Status: No;	".format(name,description),"userName":"Carl Dolman","userRole":"Admin","ActionType":"SYSTEM","ModuleName":"Base Master","FormName":"Unit of Measurement","esignComments":""}
+
+
+    unitDelete(driver,name,description,"No")
+
+    BrowserOperation.refreshLogin(driver)
+
+    afterCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
+
+    # print(afterCount)
+
+
+
+    if afterCount==beforeCount:
+        ResultCase1="FAIL"
+
+        print("Audit trail is not captured")
+
+    elif afterCount==beforeCount+1:
+        ResultCase1 = "PASS"
+
+        print("Audit trail is captured")
+
+        auditDateAndTime=driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[2]").text
+
+        print("Date and Time - "+auditDateAndTime)
+
+        auditAction = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[3]").text
+
+        print("Audit Action - "+auditAction)
+
+        if auditAction==auditTrailRecord.get("AuditAction"):
+            print("Audit action is properly mentioned")
+
+        else:
+            print("Audit action is not properly mentioned")
+
+        comments = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[4]").text
+
+        expectedComments=auditTrailRecord.get("comments")
+
+        if comments==expectedComments:
+            print("Comment is properly displayed")
+
+        else:
+            print("Comment is not displaying properly")
+
+        print("Comments - "+comments)
+
+        userName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[5]").text
+
+        expectedUserName=auditTrailRecord.get("userName")
+
+        if userName==expectedUserName:
+            print("user name is properly displayed")
+
+        else:
+            print("user name is not displaying properly")
+
+        print("User Name - "+userName)
+        userRole = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[6]").text
+
+        expectedUserName = auditTrailRecord.get("userRole")
+
+        if userRole == expectedUserName:
+            print("user role is properly displayed")
+
+        else:
+            print("user role is not displaying properly")
+        print("User Role - "+userRole)
+        actionType = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[7]").text
+
+        expectedActionType= auditTrailRecord.get("actionType")
+
+        if actionType == expectedActionType:
+            print("Action type is properly displayed")
+
+        else:
+            print("Action type is not displaying properly")
+
+        print("Action type - "+actionType)
+        moduleName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[8]").text
+
+        expectedModuleName = auditTrailRecord.get("moduleName")
+
+        if expectedModuleName == moduleName:
+            print("Module name  is properly displayed")
+
+        else:
+            print("Module name   is not displaying properly")
+        print("Module Name - "+moduleName)
+        formName = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[9]").text
+
+        expectedFormName = auditTrailRecord.get("formName")
+
+        if formName == expectedFormName:
+            print("Form name is properly displayed")
+
+        else:
+            print("Form name is not displaying properly")
+        print("Form Name - "+formName)
+        esignComments = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[10]").text
+        expectedEsignComments = auditTrailRecord.get("esignComments")
+
+        if esignComments == expectedEsignComments:
+            print("Esign comment is properly displayed")
+
+        else:
+            print("AEsign comment  is not displaying properly")
+        print("Esign comments"+esignComments)
+    elif afterCount>beforeCount+1:
+         ResultCase1 = "PASS-More than one record is available"
+
+

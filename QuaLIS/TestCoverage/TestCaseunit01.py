@@ -15,6 +15,7 @@ TestCoverageUnit.unitAdd(driver,oldName,oldDescription,"No")
 
 BrowserOperation.refreshLogin(driver)
 
+
 TestCoverageUnit.unitEdit(driver,oldName,oldDescription,"No",newName,newDescription)
 
 BrowserOperation.refreshLogin(driver)
@@ -22,4 +23,10 @@ BrowserOperation.refreshLogin(driver)
 TestCoverageUnit.unitDelete(driver,newName,newDescription,"No")
 
 BrowserOperation.refreshLogin(driver)
+
+TestCoverageUnit.downloadExcel(driver)
+
+BrowserOperation.refreshLogin(driver)
+
+TestCoverageUnit.downloadPDF(driver)
 

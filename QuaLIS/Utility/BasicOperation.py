@@ -88,5 +88,8 @@ def scrollClickXpath(driver,xpath):
    element.click()
 
 
+def screenshot(driver,location):
+    driver.save_screenshot(location)
+
 
 

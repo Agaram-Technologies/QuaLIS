@@ -1,28 +1,61 @@
-from configparser import ConfigParser
+import pytest
 
-from TestCoverage import TestCoverageUnit, TestCoverageAudittrail
-from Utility import BrowserOperation, BasicOperation
-
-name=BasicOperation.timet()[11:]
-
-description="cm1"
-
-unit=ConfigParser()
-unit.read(BasicOperation.projectDirectory()+"\\TestData\\TestDataUnit.ini")
-
-driver=BrowserOperation.launchLIMS()
-
-TestCoverageUnit.downloadExcel(driver)
-
-TestCoverageUnit.downloadPDF(driver)
+from TestCoverage import TestCoverageUnit
+from Utility import BrowserOperation
 
 
+oldName="100"
 
-#TestCoverageUnit.unitAdd(driver,unit.get("Add","name"),unit.get("Add","description"),"No")
+oldDescription="100des"
 
-#TestCoverageUnit.auditTrailUnitAdd(driver,name,description,"No")
+newName="200"
 
-#TestCoverageUnit.unitDelete(driver,name)
+newDescription="200ds"
+
+@pytest.fixture(scope="function")
+def preCondition():
+    global driver
+    driver = BrowserOperation.launchLIMS()
+
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_unitAdd(preCondition):
+    TestCoverageUnit.unitAdd(driver, oldName, oldDescription, "No")
+    BrowserOperation.refreshLogin(driver)
+
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_unitEdit():
+    TestCoverageUnit.unitEdit(driver, oldName, oldDescription, "No", newName, newDescription)
+    BrowserOperation.refreshLogin(driver)
+
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_unitDelete():
+    TestCoverageUnit.unitDelete(driver, newName, newDescription, "No")
+    BrowserOperation.refreshLogin(driver)
+
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_exportPDF():
+    TestCoverageUnit.downloadExcel(driver)
+    BrowserOperation.refreshLogin(driver)
+
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_exportEXCEL():
+    TestCoverageUnit.downloadPDF(driver)
+    BrowserOperation.refreshLogin(driver)
+
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_auditTrailUnitAdd(preCondition):
+    TestCoverageUnit.auditTrailUnitAdd(driver,oldName,oldDescription,"No")
+
+oldName="200"
+oldDescription="dd"
+@pytest.mark.skip(reason="no way of currently testing this")
+def test_auditTrailUnitEdit(preCondition):
+    TestCoverageUnit.auditTrailUnitEdit(driver, oldName, oldDescription, newName, newDescription, "oldDefaultStatus")
+
+def test_auditTrailUnitDelete(preCondition):
+    TestCoverageUnit.auditTrailUnitDelete(driver, oldName, oldDescription, "No")
+
+
 
 
 
