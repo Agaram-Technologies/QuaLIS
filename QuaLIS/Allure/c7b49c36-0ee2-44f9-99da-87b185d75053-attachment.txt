@@ -1,0 +1,3 @@
+Entered Login id
+Entered password id
+Clicked the login button

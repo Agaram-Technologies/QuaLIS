@@ -1,0 +1,12 @@
+D:\Agaram Technologies\Github\QuaLIS
+Browser Launched
+Link was hit
+Entered Login id
+Entered password id
+Clicked the login button
+before count-->205
+afterCount-->206
+unit added successfully
+Entered Login id
+Entered password id
+Clicked the login button

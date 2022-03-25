@@ -5,8 +5,6 @@ from Utility import BrowserOperation
 
 driver=BrowserOperation.launchLIMS()
 
-TestCoverageUnit.unitAdd(driver, "oldName", "oldDescription", "No")
 
-
-#TestCoverageUnit.unitFilter(driver)
+TestCoverageUnit.unitFilter(driver)
 

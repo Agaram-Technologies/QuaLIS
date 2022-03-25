@@ -92,4 +92,44 @@ def screenshot(driver,location):
     driver.save_screenshot(location)
 
 
+def exceptionClick(driver,xpath):
+
+    element=driver.find_element(By.XPATH,xpath)
+    exception=True
+
+    x=1000
+
+    for i in range(0,x):
+        print(i)
+        if exception==False:
+            break
+
+        try:
+            element.click()
+
+            exception=False
+
+            if exception==False:
+                break
+
+        except:
+            time.sleep(1)
+
+            print("exception occured ")
+
+            try:
+                element.click()
+
+                exception = False
+
+                if(exception==False):
+                    break
+
+            except:
+                print("exception occured ")
+
+
+
+
+
 

@@ -11,22 +11,23 @@ projectDirectory=BasicOperation.projectDirectory()
 
 
 configDriver=ConfigParser()
-configDriver.read("..\config.ini")
+configDriver.read(BasicOperation.projectDirectory()+"\\config.ini")
 
 objectRepository=ConfigParser()
 objectRepository.read(projectDirectory+"\\ObjectRepository\\ElementLogin.ini")
 
 
-
 def launchLIMS():
-    driver = webdriver.Chrome(executable_path="..\chromedriver.exe")
+    driver = webdriver.Chrome(executable_path=BasicOperation.projectDirectory()+"\\chromedriver.exe")
     LogOperation.logInfo("Browser Launched")
     print("Browser Launched")
     driver.maximize_window()
-    driver.implicitly_wait(50)
+    driver.implicitly_wait(40)
     driver.get(configDriver.get("Credential", "link"))
     LogOperation.logInfo("Link was hit")
     print("Link was hit")
+
+
 
     BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
                                  configDriver.get("Credential", "loginid"))
@@ -60,7 +61,7 @@ def launchLIMS():
     except:
          print("exception")
          time.sleep(5)
-         BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
+         #BasicOperation.clickXpath(driver, objectRepository.get("login", "pin"))
 
     LogOperation.logError("Launch lims - Unable to Click the pin icon")
 

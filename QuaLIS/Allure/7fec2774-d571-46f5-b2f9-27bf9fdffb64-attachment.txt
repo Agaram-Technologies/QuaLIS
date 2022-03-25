@@ -1,0 +1,11 @@
+1 - 50 of 333
+once the count get
+333
+unit delete Matched at 1
+unit count is 1 200 100 No
+1
+(//span[@data-tip='Delete'])[1]
+Entered Login id
+Entered password id
+Clicked the login button
+1 - 50 of 336
