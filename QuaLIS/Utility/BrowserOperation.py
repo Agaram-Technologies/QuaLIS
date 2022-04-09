@@ -65,6 +65,7 @@ def launchLIMS():
 
     LogOperation.logError("Launch lims - Unable to Click the pin icon")
 
+
     return driver
 
 def refreshLogin(driver):

@@ -13,7 +13,11 @@ def timet():
     return usrsysdatetime
 
 def clickXpath(driver,xpath):
-   driver.find_element(By.XPATH,xpath).click()
+ try:
+     driver.find_element(By.XPATH,xpath).click()
+ except:
+     time.sleep(5)
+     driver.find_element(By.XPATH, xpath).click()
 
 def sendKeysXpath(driver,xpath,value):
     driver.find_element(By.XPATH,xpath).send_keys(value)
@@ -132,4 +136,14 @@ def exceptionClick(driver,xpath):
 
 
 
+def selectByVisibleText(driver,element,option):
 
+    driver.find_element(By.XPATH,element).click()
+
+    time.sleep(2)
+
+    optionXpath="//*[text()='{}']".format(option)
+
+    print(optionXpath)
+
+    driver.find_element(By.XPATH,optionXpath).click()

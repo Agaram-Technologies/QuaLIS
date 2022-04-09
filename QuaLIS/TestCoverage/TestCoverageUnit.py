@@ -138,7 +138,7 @@ def unitDelete(driver,name,description,defaultStatus):
 
     if afterCount==beforeCount-1:
         print("Unit Delete is working properly")
-    
+
     else:
         print("Unit Delete is not working properly, Data is not deleted")
 

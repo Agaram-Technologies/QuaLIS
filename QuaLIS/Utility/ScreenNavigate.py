@@ -19,6 +19,9 @@ master=auditTrail.get("AuditTrail","masterIcon")
 
 auditTrail=auditTrail.get("AuditTrail", "auditTrailIcon")
 
+sampleRegistration=ConfigParser()
+sampleRegistration.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementSampleRegistration.ini")
+
 def unit(driver):
 
     try:
@@ -117,3 +120,50 @@ def auditTrailPostCondition(driver):
     except:
         LogOperation.logError("Unable to click the User management icon")
 
+
+
+
+
+
+
+
+
+def sampleRegistration(driver):
+
+    try:
+        BasicOperation.clickXpath(driver, sampleRegistration.get("EU", "registration"))
+
+        LogOperation.logInfo("clicked the Master icon")
+    except:
+        LogOperation.logError("Unable to click the Master icon")
+
+    time.sleep(200)
+
+    try:
+        element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+
+        driver.execute_script("arguments[0].scrollIntoView();", element)
+
+        time.sleep(2)
+
+        element.click()
+
+        LogOperation.logInfo("clicked the Base Master icon")
+    except:
+        LogOperation.logError("Unable to click the Base Master icon")
+
+
+    time.sleep(2)
+
+    try:
+
+        BasicOperation.scrollClickXpath(driver, baseMaster.get("UnitOfMeasurement", "unitOfMeasurementIcon"))
+        LogOperation.logInfo("clicked the unit icon")
+    except:
+
+        time.sleep(2)
+        try:
+            BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "unitOfMeasurementIcon"))
+            LogOperation.logInfo("clicked the unit icon")
+        except:
+            LogOperation.logError("Unable to click the unit icon")

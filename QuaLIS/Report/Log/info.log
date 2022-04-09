@@ -463,3 +463,341 @@
 03/25/2022 05:25:58 PM:INFO: Entered the unit description
 03/25/2022 05:26:00 PM:INFO: Clicked the default status button
 03/25/2022 05:26:00 PM:INFO: Clicked the add submit button
+03/31/2022 04:15:45 PM:INFO: Browser Launched
+03/31/2022 04:15:46 PM:INFO: Link was hit
+03/31/2022 04:15:57 PM:INFO: Browser Launched
+03/31/2022 04:15:59 PM:INFO: Link was hit
+04/06/2022 10:22:01 AM:INFO: Browser Launched
+04/06/2022 10:22:08 AM:INFO: Link was hit
+04/06/2022 10:22:08 AM:INFO: Entered Login id
+04/06/2022 10:22:11 AM:INFO: Entered password id
+04/06/2022 10:22:13 AM:INFO: Clicked the login button
+04/06/2022 10:22:14 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:22:14 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:22:35 AM:INFO: Browser Launched
+04/06/2022 10:22:43 AM:INFO: Link was hit
+04/06/2022 10:22:43 AM:INFO: Entered Login id
+04/06/2022 10:22:45 AM:INFO: Entered password id
+04/06/2022 10:22:47 AM:INFO: Clicked the login button
+04/06/2022 10:22:48 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:22:48 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:23:56 AM:INFO: Browser Launched
+04/06/2022 10:24:03 AM:INFO: Link was hit
+04/06/2022 10:24:03 AM:INFO: Entered Login id
+04/06/2022 10:24:05 AM:INFO: Entered password id
+04/06/2022 10:24:07 AM:INFO: Clicked the login button
+04/06/2022 10:24:08 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:24:08 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:24:27 AM:INFO: Browser Launched
+04/06/2022 10:24:34 AM:INFO: Link was hit
+04/06/2022 10:24:34 AM:INFO: Entered Login id
+04/06/2022 10:24:36 AM:INFO: Entered password id
+04/06/2022 10:24:38 AM:INFO: Clicked the login button
+04/06/2022 10:24:40 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:24:40 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:25:14 AM:INFO: Browser Launched
+04/06/2022 10:25:22 AM:INFO: Link was hit
+04/06/2022 10:25:22 AM:INFO: Entered Login id
+04/06/2022 10:25:24 AM:INFO: Entered password id
+04/06/2022 10:25:26 AM:INFO: Clicked the login button
+04/06/2022 10:25:27 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:25:27 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:25:49 AM:INFO: Browser Launched
+04/06/2022 10:25:58 AM:INFO: Link was hit
+04/06/2022 10:25:58 AM:INFO: Entered Login id
+04/06/2022 10:26:00 AM:INFO: Entered password id
+04/06/2022 10:26:02 AM:INFO: Clicked the login button
+04/06/2022 10:26:04 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:26:04 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:26:25 AM:INFO: Browser Launched
+04/06/2022 10:26:32 AM:INFO: Link was hit
+04/06/2022 10:26:33 AM:INFO: Entered Login id
+04/06/2022 10:26:35 AM:INFO: Entered password id
+04/06/2022 10:26:37 AM:INFO: Clicked the login button
+04/06/2022 10:26:38 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:26:38 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:26:38 AM:ERROR: Unable to click the Master icon
+04/06/2022 10:27:22 AM:ERROR: Unable to click the Base Master icon
+04/06/2022 10:27:33 AM:WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016DDB23E340>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/143da95bf52273d1e228d539c694ed5a/element
+04/06/2022 10:27:37 AM:WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016DDB23E700>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/143da95bf52273d1e228d539c694ed5a/element
+04/06/2022 10:27:41 AM:WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016DDB23E850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/143da95bf52273d1e228d539c694ed5a/element
+04/06/2022 10:27:45 AM:INFO: Browser Launched
+04/06/2022 10:27:52 AM:INFO: Link was hit
+04/06/2022 10:27:52 AM:INFO: Entered Login id
+04/06/2022 10:27:54 AM:INFO: Entered password id
+04/06/2022 10:27:56 AM:INFO: Clicked the login button
+04/06/2022 10:27:58 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:27:58 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:27:58 AM:ERROR: Unable to click the Master icon
+04/06/2022 10:28:30 AM:ERROR: Unable to click the Base Master icon
+04/06/2022 10:28:36 AM:WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019BFF9CBD90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/214a2ba885160b8823a37e2797394628/element
+04/06/2022 10:28:40 AM:WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019BFF9CB490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/214a2ba885160b8823a37e2797394628/element
+04/06/2022 10:28:44 AM:WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019BFF9CBF70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/214a2ba885160b8823a37e2797394628/element
+04/06/2022 10:28:55 AM:WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019BFF9CB130>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/214a2ba885160b8823a37e2797394628/element
+04/06/2022 10:28:59 AM:WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019BFF9C8430>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/214a2ba885160b8823a37e2797394628/element
+04/06/2022 10:29:03 AM:WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019BFF9C8520>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/214a2ba885160b8823a37e2797394628/element
+04/06/2022 10:29:07 AM:ERROR: Unable to click the unit icon
+04/06/2022 10:29:09 AM:INFO: Browser Launched
+04/06/2022 10:29:33 AM:INFO: Link was hit
+04/06/2022 10:29:33 AM:INFO: Entered Login id
+04/06/2022 10:29:35 AM:INFO: Entered password id
+04/06/2022 10:29:37 AM:INFO: Clicked the login button
+04/06/2022 10:29:40 AM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 10:29:40 AM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 10:29:40 AM:ERROR: Unable to click the Master icon
+04/06/2022 10:33:42 AM:ERROR: Unable to click the Base Master icon
+04/06/2022 10:35:06 AM:ERROR: Unable to click the unit icon
+04/06/2022 03:44:37 PM:INFO: Browser Launched
+04/06/2022 03:44:57 PM:INFO: Link was hit
+04/06/2022 03:44:57 PM:INFO: Entered Login id
+04/06/2022 03:44:59 PM:INFO: Entered password id
+04/06/2022 03:45:01 PM:INFO: Clicked the login button
+04/06/2022 03:45:05 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:45:05 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 03:45:05 PM:ERROR: Unable to click the Master icon
+04/06/2022 03:46:08 PM:INFO: Browser Launched
+04/06/2022 03:46:19 PM:INFO: Link was hit
+04/06/2022 03:46:19 PM:INFO: Entered Login id
+04/06/2022 03:46:21 PM:INFO: Entered password id
+04/06/2022 03:46:23 PM:INFO: Clicked the login button
+04/06/2022 03:46:25 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:46:25 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 03:46:25 PM:ERROR: Unable to click the Master icon
+04/06/2022 03:48:04 PM:INFO: Browser Launched
+04/06/2022 03:48:12 PM:INFO: Link was hit
+04/06/2022 03:48:12 PM:INFO: Entered Login id
+04/06/2022 03:48:14 PM:INFO: Entered password id
+04/06/2022 03:48:16 PM:INFO: Clicked the login button
+04/06/2022 03:48:18 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:48:18 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 03:48:55 PM:INFO: Browser Launched
+04/06/2022 03:49:25 PM:INFO: Link was hit
+04/06/2022 03:49:25 PM:INFO: Entered Login id
+04/06/2022 03:49:28 PM:INFO: Entered password id
+04/06/2022 03:49:30 PM:INFO: Clicked the login button
+04/06/2022 03:49:32 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:49:32 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 03:50:47 PM:INFO: Browser Launched
+04/06/2022 03:50:57 PM:INFO: Link was hit
+04/06/2022 03:50:57 PM:INFO: Entered Login id
+04/06/2022 03:50:59 PM:INFO: Entered password id
+04/06/2022 03:51:01 PM:INFO: Clicked the login button
+04/06/2022 03:51:03 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:51:03 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 03:55:16 PM:INFO: Browser Launched
+04/06/2022 03:55:31 PM:INFO: Link was hit
+04/06/2022 03:55:31 PM:INFO: Entered Login id
+04/06/2022 03:55:33 PM:INFO: Entered password id
+04/06/2022 03:55:35 PM:INFO: Clicked the login button
+04/06/2022 03:55:37 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:55:37 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 03:56:57 PM:INFO: Browser Launched
+04/06/2022 03:57:23 PM:INFO: Link was hit
+04/06/2022 03:57:23 PM:INFO: Entered Login id
+04/06/2022 03:57:25 PM:INFO: Entered password id
+04/06/2022 03:57:27 PM:INFO: Clicked the login button
+04/06/2022 03:57:28 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:57:28 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 03:58:56 PM:INFO: Browser Launched
+04/06/2022 03:59:09 PM:INFO: Link was hit
+04/06/2022 03:59:09 PM:INFO: Entered Login id
+04/06/2022 03:59:11 PM:INFO: Entered password id
+04/06/2022 03:59:13 PM:INFO: Clicked the login button
+04/06/2022 03:59:15 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 03:59:15 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:00:27 PM:INFO: Browser Launched
+04/06/2022 04:00:42 PM:INFO: Link was hit
+04/06/2022 04:00:42 PM:INFO: Entered Login id
+04/06/2022 04:00:44 PM:INFO: Entered password id
+04/06/2022 04:00:46 PM:INFO: Clicked the login button
+04/06/2022 04:00:50 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:00:50 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:01:14 PM:INFO: Browser Launched
+04/06/2022 04:01:25 PM:INFO: Link was hit
+04/06/2022 04:01:25 PM:INFO: Entered Login id
+04/06/2022 04:01:27 PM:INFO: Entered password id
+04/06/2022 04:01:29 PM:INFO: Clicked the login button
+04/06/2022 04:01:31 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:01:31 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:02:27 PM:INFO: Browser Launched
+04/06/2022 04:02:36 PM:INFO: Link was hit
+04/06/2022 04:02:36 PM:INFO: Entered Login id
+04/06/2022 04:02:38 PM:INFO: Entered password id
+04/06/2022 04:02:40 PM:INFO: Clicked the login button
+04/06/2022 04:02:42 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:02:42 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:03:04 PM:INFO: Browser Launched
+04/06/2022 04:03:30 PM:INFO: Link was hit
+04/06/2022 04:03:30 PM:INFO: Entered Login id
+04/06/2022 04:03:32 PM:INFO: Entered password id
+04/06/2022 04:03:34 PM:INFO: Clicked the login button
+04/06/2022 04:03:36 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:03:36 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:04:16 PM:INFO: Browser Launched
+04/06/2022 04:04:29 PM:INFO: Link was hit
+04/06/2022 04:04:30 PM:INFO: Entered Login id
+04/06/2022 04:04:32 PM:INFO: Entered password id
+04/06/2022 04:04:34 PM:INFO: Clicked the login button
+04/06/2022 04:04:36 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:04:36 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:08:00 PM:INFO: Browser Launched
+04/06/2022 04:08:08 PM:INFO: Link was hit
+04/06/2022 04:08:08 PM:INFO: Entered Login id
+04/06/2022 04:08:11 PM:INFO: Entered password id
+04/06/2022 04:08:13 PM:INFO: Clicked the login button
+04/06/2022 04:08:14 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:08:14 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:12:54 PM:INFO: Browser Launched
+04/06/2022 04:13:04 PM:INFO: Link was hit
+04/06/2022 04:13:04 PM:INFO: Entered Login id
+04/06/2022 04:13:06 PM:INFO: Entered password id
+04/06/2022 04:13:08 PM:INFO: Clicked the login button
+04/06/2022 04:13:10 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:13:10 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:14:25 PM:INFO: Browser Launched
+04/06/2022 04:14:34 PM:INFO: Link was hit
+04/06/2022 04:14:34 PM:INFO: Entered Login id
+04/06/2022 04:14:36 PM:INFO: Entered password id
+04/06/2022 04:14:38 PM:INFO: Clicked the login button
+04/06/2022 04:14:44 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:14:44 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:18:07 PM:INFO: Browser Launched
+04/06/2022 04:18:19 PM:INFO: Link was hit
+04/06/2022 04:18:19 PM:INFO: Entered Login id
+04/06/2022 04:18:21 PM:INFO: Entered password id
+04/06/2022 04:18:23 PM:INFO: Clicked the login button
+04/06/2022 04:18:26 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:18:26 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:20:53 PM:INFO: Browser Launched
+04/06/2022 04:21:05 PM:INFO: Link was hit
+04/06/2022 04:21:05 PM:INFO: Entered Login id
+04/06/2022 04:21:07 PM:INFO: Entered password id
+04/06/2022 04:21:09 PM:INFO: Clicked the login button
+04/06/2022 04:21:11 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:21:11 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:28:23 PM:INFO: Browser Launched
+04/06/2022 04:28:30 PM:INFO: Link was hit
+04/06/2022 04:28:30 PM:INFO: Entered Login id
+04/06/2022 04:28:32 PM:INFO: Entered password id
+04/06/2022 04:28:34 PM:INFO: Clicked the login button
+04/06/2022 04:28:36 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:28:36 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:29:33 PM:INFO: Browser Launched
+04/06/2022 04:29:45 PM:INFO: Link was hit
+04/06/2022 04:29:45 PM:INFO: Entered Login id
+04/06/2022 04:29:47 PM:INFO: Entered password id
+04/06/2022 04:29:49 PM:INFO: Clicked the login button
+04/06/2022 04:29:51 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:29:51 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:30:50 PM:INFO: Browser Launched
+04/06/2022 04:30:59 PM:INFO: Link was hit
+04/06/2022 04:30:59 PM:INFO: Entered Login id
+04/06/2022 04:31:01 PM:INFO: Entered password id
+04/06/2022 04:31:04 PM:INFO: Clicked the login button
+04/06/2022 04:31:05 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:31:05 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:32:16 PM:INFO: Browser Launched
+04/06/2022 04:32:24 PM:INFO: Link was hit
+04/06/2022 04:32:24 PM:INFO: Entered Login id
+04/06/2022 04:32:26 PM:INFO: Entered password id
+04/06/2022 04:32:28 PM:INFO: Clicked the login button
+04/06/2022 04:32:30 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:32:30 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:33:49 PM:INFO: Browser Launched
+04/06/2022 04:33:57 PM:INFO: Link was hit
+04/06/2022 04:33:57 PM:INFO: Entered Login id
+04/06/2022 04:33:59 PM:INFO: Entered password id
+04/06/2022 04:34:01 PM:INFO: Clicked the login button
+04/06/2022 04:34:03 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:34:03 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:35:51 PM:INFO: Browser Launched
+04/06/2022 04:35:59 PM:INFO: Link was hit
+04/06/2022 04:36:00 PM:INFO: Entered Login id
+04/06/2022 04:36:02 PM:INFO: Entered password id
+04/06/2022 04:36:04 PM:INFO: Clicked the login button
+04/06/2022 04:36:06 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:36:06 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:39:33 PM:INFO: Browser Launched
+04/06/2022 04:39:43 PM:INFO: Link was hit
+04/06/2022 04:39:43 PM:INFO: Entered Login id
+04/06/2022 04:39:45 PM:INFO: Entered password id
+04/06/2022 04:39:47 PM:INFO: Clicked the login button
+04/06/2022 04:39:49 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:39:49 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:43:12 PM:INFO: Browser Launched
+04/06/2022 04:43:19 PM:INFO: Link was hit
+04/06/2022 04:43:19 PM:INFO: Entered Login id
+04/06/2022 04:43:21 PM:INFO: Entered password id
+04/06/2022 04:43:23 PM:INFO: Clicked the login button
+04/06/2022 04:43:25 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:43:25 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:46:25 PM:INFO: Browser Launched
+04/06/2022 04:46:33 PM:INFO: Link was hit
+04/06/2022 04:46:33 PM:INFO: Entered Login id
+04/06/2022 04:46:35 PM:INFO: Entered password id
+04/06/2022 04:46:37 PM:INFO: Clicked the login button
+04/06/2022 04:46:39 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:46:39 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:47:54 PM:INFO: Browser Launched
+04/06/2022 04:48:02 PM:INFO: Link was hit
+04/06/2022 04:48:02 PM:INFO: Entered Login id
+04/06/2022 04:48:05 PM:INFO: Entered password id
+04/06/2022 04:48:07 PM:INFO: Clicked the login button
+04/06/2022 04:48:09 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:48:09 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 04:50:15 PM:INFO: Browser Launched
+04/06/2022 04:50:25 PM:INFO: Link was hit
+04/06/2022 04:50:25 PM:INFO: Entered Login id
+04/06/2022 04:50:27 PM:INFO: Entered password id
+04/06/2022 04:50:29 PM:INFO: Clicked the login button
+04/06/2022 04:50:31 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 04:50:31 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 05:00:08 PM:INFO: Browser Launched
+04/06/2022 05:00:19 PM:INFO: Link was hit
+04/06/2022 05:00:20 PM:INFO: Entered Login id
+04/06/2022 05:00:22 PM:INFO: Entered password id
+04/06/2022 05:00:24 PM:INFO: Clicked the login button
+04/06/2022 05:00:28 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 05:00:28 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 05:02:19 PM:INFO: Browser Launched
+04/06/2022 05:02:45 PM:INFO: Link was hit
+04/06/2022 05:02:45 PM:INFO: Entered Login id
+04/06/2022 05:02:47 PM:INFO: Entered password id
+04/06/2022 05:02:49 PM:INFO: Clicked the login button
+04/06/2022 05:02:51 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 05:02:51 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 05:04:11 PM:INFO: Browser Launched
+04/06/2022 05:04:19 PM:INFO: Link was hit
+04/06/2022 05:04:19 PM:INFO: Entered Login id
+04/06/2022 05:04:21 PM:INFO: Entered password id
+04/06/2022 05:04:23 PM:INFO: Clicked the login button
+04/06/2022 05:04:25 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 05:04:25 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 05:14:48 PM:INFO: Browser Launched
+04/06/2022 05:15:20 PM:INFO: Link was hit
+04/06/2022 05:15:20 PM:INFO: Entered Login id
+04/06/2022 05:15:23 PM:INFO: Entered password id
+04/06/2022 05:15:25 PM:INFO: Clicked the login button
+04/06/2022 05:15:27 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 05:15:27 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 05:19:42 PM:INFO: Browser Launched
+04/06/2022 05:19:50 PM:INFO: Link was hit
+04/06/2022 05:19:50 PM:INFO: Entered Login id
+04/06/2022 05:19:52 PM:INFO: Entered password id
+04/06/2022 05:19:54 PM:INFO: Clicked the login button
+04/06/2022 05:19:55 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 05:19:55 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/06/2022 05:24:06 PM:INFO: Browser Launched
+04/06/2022 05:24:20 PM:INFO: Link was hit
+04/06/2022 05:24:21 PM:INFO: Entered Login id
+04/06/2022 05:24:23 PM:INFO: Entered password id
+04/06/2022 05:24:25 PM:INFO: Clicked the login button
+04/06/2022 05:24:30 PM:INFO: Launch lims - Clicked the pin icon
+04/06/2022 05:24:30 PM:ERROR: Launch lims - Unable to Click the pin icon
+04/07/2022 02:12:00 PM:INFO: Browser Launched
+04/07/2022 02:12:20 PM:INFO: Link was hit
+04/07/2022 02:12:20 PM:INFO: Entered Login id
+04/07/2022 02:12:22 PM:INFO: Entered password id
+04/07/2022 02:12:24 PM:INFO: Clicked the login button
+04/07/2022 02:12:32 PM:INFO: Launch lims - Clicked the pin icon
+04/07/2022 02:12:32 PM:ERROR: Launch lims - Unable to Click the pin icon
