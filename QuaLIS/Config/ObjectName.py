@@ -31,3 +31,10 @@ defaultStatusToggle="defaultStatusToggle"
 addSubmit="addSubmit"
 
 addCancel="addCancel"
+
+
+module="module"
+
+subModule="subModule"
+
+screen="screen"
