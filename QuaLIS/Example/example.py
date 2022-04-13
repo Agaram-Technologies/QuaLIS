@@ -1,3 +1,5 @@
-optionXpath = "//*[text()='{}']".format("option")
+dic = {}
 
-print(optionXpath)
+dic.update({'a':'d'})
+
+print(dic)

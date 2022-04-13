@@ -4,6 +4,8 @@ from datetime import datetime
 import time
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 def timet():
@@ -13,11 +15,15 @@ def timet():
     return usrsysdatetime
 
 def clickXpath(driver,xpath):
- try:
-     driver.find_element(By.XPATH,xpath).click()
- except:
-     time.sleep(5)
-     driver.find_element(By.XPATH, xpath).click()
+
+    element=driver.find_element(By.XPATH,xpath)
+
+    try:
+        element.click()
+
+    except:
+        time.sleep(5)
+        element.click()
 
 def sendKeysXpath(driver,xpath,value):
     driver.find_element(By.XPATH,xpath).send_keys(value)
@@ -72,8 +78,6 @@ def getText(driver,xpath):
 
 def auditTrailCount(text):
 
-
-
     textList=text.split(' ')
 
     count=len(textList)-1
@@ -82,14 +86,11 @@ def auditTrailCount(text):
 
 
 
-def scrollClickXpath(driver,xpath):
-   element=driver.find_element(By.XPATH,xpath).click()
+def scrollToElement(driver,xpath):
+   element=driver.find_element(By.XPATH,xpath)
 
    driver.execute_script("arguments[0].scrollIntoView();", element)
 
-   time.sleep(2)
-
-   element.click()
 
 
 def screenshot(driver,location):
@@ -147,3 +148,13 @@ def selectByVisibleText(driver,element,option):
     print(optionXpath)
 
     driver.find_element(By.XPATH,optionXpath).click()
+
+
+
+def wait(driver,element,time):
+
+    wait = WebDriverWait(driver, time)
+
+    result = wait.until(expected_conditions.element_to_be_clickable(element))
+
+    print(result)
