@@ -1,8 +1,6 @@
 from Config import ObjectName
 
 
-
-
 pin = "//a[@class='text-center nav-link']"
 
 masterIcon="//a[@data-rb-event-key='MenuId_1']"
@@ -47,7 +45,7 @@ unitDefaultStatus="/html/body/div[5]/div/div/div[2]/div/div/form/div/div[3]/div/
 
 unitDefaultStatusToggle="//input[@name='ndefaultstatus' and @type='checkbox']"
 
-unitCount="//div[@class='k-pager-info k-label']"
+unitTotalCount="//div[@class='k-pager-info k-label']"
 
 unitScreenHeader="//*[@class='navbar-brand']/h2"
 
@@ -58,7 +56,6 @@ module="Master"
 subModule="Base Master"
 
 screen="Unit"
-
 
 def elementUnit():
 
@@ -90,9 +87,9 @@ def elementUnit():
 
     unit.update({ObjectName.addPopupHeader:unitAddPopupHeader})
 
-    unit.update({ObjectName.moduleIcon:masterIcon})
+    unit.update({ObjectName.totalCount:unitTotalCount})
 
-    unit.update({ObjectName.moduleIcon:masterIcon})
+    unit.update({ObjectName.defaultStatus:unitDefaultStatus})
 
     return unit
 

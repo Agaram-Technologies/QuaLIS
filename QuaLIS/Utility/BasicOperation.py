@@ -158,3 +158,15 @@ def wait(driver,element,time):
     result = wait.until(expected_conditions.element_to_be_clickable(element))
 
     print(result)
+
+def totalCount(driver,xpath):
+
+    text=driver.find_element(By.XPATH,xpath).text
+
+    textList=text.split(' ')
+
+    count=textList[len(textList)-1]
+
+    return count
+
+

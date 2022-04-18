@@ -26,15 +26,12 @@ def launchLIMS():
     driver.get(configDriver.get("Credential", "link"))
     LogOperation.logInfo("Link was hit")
     print("Link was hit")
-
-
-
     BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),
                                  configDriver.get("Credential", "loginid"))
     LogOperation.logInfo("Entered Login id")
     print("Entered Login id")
 
-    time.sleep(2)
+
 
     BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
 
@@ -44,7 +41,7 @@ def launchLIMS():
 
     print("Entered password id")
 
-    time.sleep(2)
+
 
     BasicOperation.clickXpath(driver, objectRepository.get("login", "login"))
 
@@ -75,7 +72,7 @@ def refreshLogin(driver):
     LogOperation.logInfo("Entered Login id")
     print("Entered Login id")
 
-    time.sleep(2)
+
 
     BasicOperation.clickXpath(driver, objectRepository.get("login", "password"))
 
@@ -85,7 +82,7 @@ def refreshLogin(driver):
 
     print("Entered password id")
 
-    time.sleep(2)
+
 
     driver.find_element(By.XPATH, "//*[@id='nusermultirolecode']").click()
 

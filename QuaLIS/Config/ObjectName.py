@@ -32,6 +32,8 @@ addSubmit="addSubmit"
 
 addCancel="addCancel"
 
+totalCount="totalCount"
+
 
 module="module"
 

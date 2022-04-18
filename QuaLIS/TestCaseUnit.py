@@ -1,8 +1,14 @@
+import time
+
 import pytest
 
 import allure
 
+from CommonMethodNameDescriptionDefaultStatus import AddAllFieldDefaultYes
+from Config.ScreenshotPath import ScreenshotUnit
+from ObjectRepository.BaseMaster import ElementUnit
 from TestCoverage import TestCoverageUnit
+from TestData import TestDataUnit
 from Utility import BrowserOperation
 
 oldName="100"
@@ -13,33 +19,45 @@ newName="200"
 
 newDescription="200ds"
 
+
+
 @pytest.fixture(scope="function")
 def preCondition():
     global driver
     driver = BrowserOperation.launchLIMS()
 
 
-def test_unitAdd(preCondition):
-    TestCoverageUnit.unitAdd(driver, oldName, oldDescription, "Yes")
-    BrowserOperation.refreshLogin(driver)
 
+
+def test_unitAdd(preCondition):
+
+    AddAllFieldDefaultYes.addFieldValueDefaultYes(driver, ElementUnit.elementUnit(),ScreenshotUnit.screenshotUnitAddAllFieldDefaultYes(), TestDataUnit.unit())
+    BrowserOperation.refreshLogin(driver)
+    time.sleep(2)
 
 def test_unitEdit():
     TestCoverageUnit.unitEdit(driver, oldName, oldDescription, "No", newName, newDescription)
     BrowserOperation.refreshLogin(driver)
+    time.sleep(2)
 
 
 def test_unitDelete():
     TestCoverageUnit.unitDelete(driver, newName, newDescription, "Yes")
     BrowserOperation.refreshLogin(driver)
+    time.sleep(2)
+
 
 def test_exportPDF():
     TestCoverageUnit.downloadExcel(driver)
     BrowserOperation.refreshLogin(driver)
+    time.sleep(2)
+
 
 def test_exportEXCEL():
     TestCoverageUnit.downloadPDF(driver)
     BrowserOperation.refreshLogin(driver)
+    time.sleep(2)
+
 
 
 def test_auditTrailUnitAdd():

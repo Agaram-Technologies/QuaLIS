@@ -14,8 +14,6 @@ baseMaster.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementBa
 
 def unitAdd(driver,name,description,defaultStatus):
 
-    time.sleep(2)
-
     ScreenNavigate.unit(driver)
 
     countListbefore=driver.find_element(By.XPATH,baseMaster.get("UnitOfMeasurement", "unitCount")).text
@@ -26,23 +24,13 @@ def unitAdd(driver,name,description,defaultStatus):
 
     print("before count-->"+str(beforeCount))
 
-    time.sleep(2)
-
     ExceptionHandling.exceptionClick(driver,baseMaster.get("UnitOfMeasurement", "unitAdd"),"Clicked the Unit add button", "Unable to click the unit add button")
 
-    time.sleep(2)
     ExceptionHandling.exceptionSendKeys(driver, baseMaster.get("UnitOfMeasurement", "unitName"), name,"Entered the unit name", "Unable to enter the unit name")
-
-
-    time.sleep(2)
 
     ExceptionHandling.exceptionSendKeys(driver, baseMaster.get("UnitOfMeasurement", "unitDescription"), name,"Entered the unit description", "Unable to enter the unit description")
 
-    time.sleep(2)
-
-
     if defaultStatus=="Yes":
-
 
         defaultStatusToggle=driver.find_element(By.XPATH,baseMaster.get("UnitOfMeasurement", "unitDefaultStatusToggle"))
 
@@ -50,12 +38,8 @@ def unitAdd(driver,name,description,defaultStatus):
             ExceptionHandling.exceptionClick(driver, baseMaster.get("UnitOfMeasurement", "unitDefaultStatus"),"Clicked the default status button","Unable to click the default status")
 
 
-
-
     ExceptionHandling.exceptionClick(driver,
                               baseMaster.get("UnitOfMeasurement", "unitAddSubmit"),"Clicked the add submit button","unable to click the add submit button")
-
-    time.sleep(2)
 
     countListafter = driver.find_element(By.XPATH, baseMaster.get("UnitOfMeasurement", "unitCount")).text
 
@@ -77,9 +61,7 @@ def unitAdd(driver,name,description,defaultStatus):
         driver.execute_script("arguments[0].scrollIntoView();", element)
     except:
         pass
-    time.sleep(2)
     element.click()
-    time.sleep(2)
 
 
 def unitDelete(driver,name,description,defaultStatus):
@@ -89,7 +71,7 @@ def unitDelete(driver,name,description,defaultStatus):
 
     countLIST = countListbefore.split(' ')
 
-    beforeCount = countLIST[4]
+    beforeCount = int(countLIST[len(countLIST)-1])
 
     print("before count-->" + str(beforeCount))
 
@@ -117,28 +99,28 @@ def unitDelete(driver,name,description,defaultStatus):
         else:
             print("Not matched")
 
-        time.sleep(2)
+
         element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
-        time.sleep(2)
+
         try:
             driver.execute_script("arguments[0].scrollIntoView();", element)
         except:
             pass
-        time.sleep(2)
+
         element.click()
-        time.sleep(2)
+
+    time.sleep(2)
 
     countListafter = driver.find_element(By.XPATH, baseMaster.get("UnitOfMeasurement", "unitCount")).text
 
     aftercountLIS = countListafter.split(' ')
 
-    afterCount = aftercountLIS[4]
+    afterCount = int(aftercountLIS[len(aftercountLIS)-1])
 
-    print("afterCount-->" + afterCount)
+    print("afterCount-->" + str(afterCount))
 
     if afterCount==beforeCount-1:
         print("Unit Delete is working properly")
-
     else:
         print("Unit Delete is not working properly, Data is not deleted")
 
@@ -166,8 +148,6 @@ def unitEdit(driver,oldName,oldDescription,oldDefaultStatus,newName,newDescripti
 
         print(container)
 
-
-
         if unitrow.__contains__(oldName):
             print("unit edit Matched at " + str(i))
             print("containertype count is", i, unitrow)
@@ -183,31 +163,34 @@ def unitEdit(driver,oldName,oldDescription,oldDefaultStatus,newName,newDescripti
 
             BasicOperation.clear(driver, baseMaster.get("UnitOfMeasurement", "unitName"))
 
-            time.sleep(2)
-
             BasicOperation.clear(driver, baseMaster.get("UnitOfMeasurement", "unitDescription"))
 
 
             BasicOperation.sendKeysXpath(driver, baseMaster.get("UnitOfMeasurement", "unitName"), newName)
-            time.sleep(2)
 
             # BasicOperation.sendKeysXpath(driver, baseMaster.get("UnitOfMeasurement", "unitDescription"),
                                          #newDescription)
-            time.sleep(2)
+
             BasicOperation.clickXpath(driver,
                                       baseMaster.get("UnitOfMeasurement", "unitEditSubmit"))
 
-            time.sleep(2)
 
             break
 
         else:
             print("Not matched")
+
+    time.sleep(2)
+
     countListafter = driver.find_element(By.XPATH, baseMaster.get("UnitOfMeasurement", "unitCount")).text
+
+    print(countListafter)
 
     aftercountLIS = countListafter.split(' ')
 
-    afterCount = aftercountLIS[4]
+
+    afterCount = aftercountLIS[len(aftercountLIS)-1]
+
 
     print("afterCount-->" + afterCount)
 
@@ -217,16 +200,16 @@ def unitEdit(driver,oldName,oldDescription,oldDefaultStatus,newName,newDescripti
     elif afterCount > beforeCount:
         print("New data is created for the edit action")
 
-    time.sleep(2)
+
     element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
-    time.sleep(2)
+
     try:
         driver.execute_script("arguments[0].scrollIntoView();", element)
     except:
         pass
-    time.sleep(2)
+
     element.click()
-    time.sleep(2)
+
 
 
 
@@ -436,15 +419,15 @@ def auditTrailUnitAdd(driver,name,description,defaultStatus):
 
                 if actualEsignComments == expectedEsignComments:
                     print("Esign comment is properly displayed")
-
                 else:
                     print("Esign comment  is not displaying properly")
 
 
 def downloadPDF(driver):
+
     time.sleep(2)
+
     ScreenNavigate.unit(driver)
-    time.sleep(2)
 
     try:
         BasicOperation.clickXpath(driver,   baseMaster.get("UnitOfMeasurement", "unitDownloadPDF"))
@@ -455,14 +438,14 @@ def downloadPDF(driver):
 
     try:
         element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
-        time.sleep(2)
+
         try:
             driver.execute_script("arguments[0].scrollIntoView();", element)
         except:
             pass
-        time.sleep(2)
+
         element.click()
-        time.sleep(2)
+
         LogOperation.logInfo("Clicked the basemaster icon")
 
     except Exception as e:
@@ -470,9 +453,9 @@ def downloadPDF(driver):
 
 
 def downloadExcel(driver):
-    time.sleep(2)
+
     ScreenNavigate.unit(driver)
-    time.sleep(2)
+
     try:
         BasicOperation.clickXpath(driver,   baseMaster.get("UnitOfMeasurement", "unitDownloadExcel"))
         LogOperation.logInfo("Clicked the Download Excel button")
@@ -495,11 +478,6 @@ def downloadExcel(driver):
 
         except Exception as e:
             LogOperation.logError("Unable to click the basemaster icon -- post condition, It causes exception-->"+str(e))
-
-
-
-
-
 
 
 
@@ -532,20 +510,6 @@ def unitFilter(driver):
 
         if rowText.__contains__(name):
             print("data shows properly")
-
-
-
-
-
-
-
-
-
-
-
-#driver=BrowserOperation.launchLIMS()
-
-#unitFilter(driver)
 
 
 
@@ -983,6 +947,3 @@ def auditTrailUnitDelete(driver,name,description,defaultStatus):
 
                 else:
                     print("Esign comment  is not displaying properly")
-
-
-

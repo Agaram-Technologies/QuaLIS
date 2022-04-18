@@ -31,14 +31,11 @@ def unit(driver):
     except:
         LogOperation.logError("Unable to click the Master icon")
 
-    time.sleep(2)
 
     try:
         element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
 
         driver.execute_script("arguments[0].scrollIntoView();", element)
-
-        time.sleep(2)
 
         element.click()
 
@@ -47,7 +44,6 @@ def unit(driver):
         LogOperation.logError("Unable to click the Base Master icon")
 
 
-    time.sleep(2)
 
     try:
 
@@ -55,7 +51,7 @@ def unit(driver):
         LogOperation.logInfo("clicked the unit icon")
     except:
 
-        time.sleep(2)
+
         try:
             BasicOperation.clickXpath(driver, baseMaster.get("UnitOfMeasurement", "unitOfMeasurementIcon"))
             LogOperation.logInfo("clicked the unit icon")
@@ -64,7 +60,7 @@ def unit(driver):
 
 def auditTrailPreCondition(driver):
 
-    time.sleep(2)
+
 
     try:
         BasicOperation.clickXpath(driver, master)
@@ -75,7 +71,7 @@ def auditTrailPreCondition(driver):
 
 
 
-    time.sleep(2)
+
 
     try:
         BasicOperation.clickXpath(driver, userManagement)
@@ -85,7 +81,7 @@ def auditTrailPreCondition(driver):
         LogOperation.logError("Unable to click the User management icon")
 
 
-    time.sleep(2)
+
 
     try:
         element = driver.find_element(By.XPATH,
@@ -93,7 +89,7 @@ def auditTrailPreCondition(driver):
 
         driver.execute_script("arguments[0].scrollIntoView();", element)
 
-        time.sleep(2)
+
 
         element.click()
 
@@ -106,14 +102,14 @@ def auditTrailPreCondition(driver):
 
 def auditTrailPostCondition(driver):
 
-    time.sleep(2)
+
     try:
         element = driver.find_element(By.XPATH, userManagement)
 
-        time.sleep(2)
+
         driver.execute_script("arguments[0].scrollIntoView();", element)
 
-        time.sleep(2)
+
         BasicOperation.clickXpath(driver, userManagement)
 
         LogOperation.logInfo("clicked the User management icon")
