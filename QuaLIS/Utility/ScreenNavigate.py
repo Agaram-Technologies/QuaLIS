@@ -1,6 +1,7 @@
 import time
 from configparser import ConfigParser
 
+from loguru import logger
 from selenium.webdriver.common.by import By
 
 from Utility import BasicOperation, LogOperation
@@ -163,3 +164,108 @@ def sampleRegistration(driver):
             LogOperation.logInfo("clicked the unit icon")
         except:
             LogOperation.logError("Unable to click the unit icon")
+
+
+def storageCondition(driver):
+
+    section="Storage Condition"
+
+    try:
+        BasicOperation.clickXpath(driver, baseMaster.get(section, "masterIcon"))
+
+        result="clicked the Master icon"
+
+        LogOperation.logInfo(result)
+
+        logger.info(result)
+    except:
+        LogOperation.logError("Unable to click the Master icon")
+
+
+    try:
+        element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+
+        driver.execute_script("arguments[0].scrollIntoView();", element)
+
+        element.click()
+
+        result = "clicked the Base Master icon"
+
+        LogOperation.logInfo(result)
+
+        logger.info(result)
+    except:
+        LogOperation.logError("Unable to click the Base Master icon")
+
+    try:
+
+        BasicOperation.clickXpath(driver, baseMaster.get(section, "storageConditionIcon"))
+        result = "clicked the storage condition icon"
+
+        LogOperation.logInfo(result)
+
+        logger.info(result)
+
+    except:
+        LogOperation.logError("Unable to click the storage condition icon")
+
+
+def containerType(driver):
+
+    block="Container Type"
+
+    try:
+        BasicOperation.clickXpath(driver, baseMaster.get(block, "masterIcon"))
+
+        result = "clicked the Master icon"
+
+        LogOperation.logInfo(result)
+
+        logger.info(result)
+    except Exception as e:
+
+        result="Unable to click the Master icon, It causes the exception "+str(e)
+
+        LogOperation.logError(result)
+
+        logger.error(result)
+
+
+    try:
+        element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
+
+        driver.execute_script("arguments[0].scrollIntoView();", element)
+
+        element.click()
+
+
+        result = "clicked the Base Master icon"
+
+        LogOperation.logError(result)
+
+        logger.info(result)
+
+    except Exception as e:
+
+
+        result="Unable to click the Base Master icon, , It causes the exception "+str(e)
+
+
+        LogOperation.logError(result)
+
+        logger.error(result)
+
+    try:
+
+        BasicOperation.clickXpath(driver, baseMaster.get(block, "containerTypeIcon"))
+
+        result = "clicked the container type icon"
+
+        LogOperation.logInfo(result)
+
+        logger.info(result)
+    except Exception as e:
+        result = "Unable to click the container type icon, It causes the exception "+str(e)
+        LogOperation.logError(result)
+        logger.error(result)
+

@@ -1,3 +1,5 @@
+import datetime
+from os import listdir
 
 import keyboard
 import time
@@ -7,8 +9,9 @@ from selenium.webdriver.common.by import By
 
 from ObjectRepository import ElementAuditTrail
 from TestCoverage import TestCoverageAudittrail
-from Utility import BasicOperation, ScreenNavigate, BrowserOperation, ResultFlag, LogOperation, ExceptionHandling
+from Utility import BasicOperation, ScreenNavigate, BrowserOperation, ResultFlag, LogOperation, ExceptionHandling, JDBC
 from Utility.BrowserOperation import configDriver
+from loguru import logger
 baseMaster=ConfigParser()
 baseMaster.read(BasicOperation.projectDirectory()+"\\ObjectRepository\\ElementBaseMaster.ini")
 
@@ -41,20 +44,26 @@ def unitAdd(driver,name,description,defaultStatus):
     ExceptionHandling.exceptionClick(driver,
                               baseMaster.get("UnitOfMeasurement", "unitAddSubmit"),"Clicked the add submit button","unable to click the add submit button")
 
-    countListafter = driver.find_element(By.XPATH, baseMaster.get("UnitOfMeasurement", "unitCount")).text
+    time.sleep(2)
 
-    aftercountLIS = countListafter.split(' ')
+    addTime=BasicOperation.timet()
 
-    afterCount = aftercountLIS[4]
-
-    print("afterCount-->" + afterCount)
-
-    if int(afterCount)==int(beforeCount)+1:
-        print("unit added successfully")
-
-    else:
-        print("Unit add is not working properly")
-
+    # countListafter = driver.find_element(By.XPATH, baseMaster.get("UnitOfMeasurement", "unitCount")).text
+    #
+    # print(countListafter)
+    #
+    # aftercountLIS = countListafter.split(' ')
+    #
+    # afterCount = aftercountLIS[len(aftercountLIS)-1]
+    #
+    # print("afterCount-->" + str(afterCount))
+    #
+    # if int(afterCount)==int(beforeCount)+1:
+    #     print("unit added successfully")
+    #
+    # else:
+    #     print("Unit add is not working properly")
+    #
     element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
     time.sleep(2)
     try:
@@ -62,6 +71,10 @@ def unitAdd(driver,name,description,defaultStatus):
     except:
         pass
     element.click()
+
+    output={"addtime":addTime}
+
+    return output
 
 
 def unitDelete(driver,name,description,defaultStatus):
@@ -226,8 +239,16 @@ def auditTrailUnitAdd(driver,name,description,defaultStatus):
     print("once the count get")
     print(beforeCount)
 
-    auditTrailRecord={"AuditAction":"ADD UNIT","comments":"Unit Name: {};Description: {};Default Status: No;".format(name,description),"userName":"Carl Dolman","userRole":"Admin","ActionType":"SYSTEM","ModuleName":"Base Master","FormName":"Unit of Measurement","esignComments":""}
+    userName=JDBC.userName()
 
+    output = unitAdd(driver, name, description, "No")
+
+    configDriver = ConfigParser()
+    configDriver.read(BasicOperation.projectDirectory() + "\\config.ini")
+
+    userRole=configDriver.get("Credential","userRole")
+
+    auditTrailRecord={"AuditDateAndTime":output.get("addtime"),"AuditAction":"ADD UNIT","comments":"Unit Name: {};Description: {};Default Status: No;".format(name,description),"userName":"{}".format(userName),"userRole":"{}".format(userRole),"ActionType":"SYSTEM","ModuleName":"Base Master","FormName":"Unit of Measurement","esignComments":""}
 
     expectedAuditAction= auditTrailRecord.get("AuditAction")
 
@@ -245,18 +266,24 @@ def auditTrailUnitAdd(driver,name,description,defaultStatus):
 
     expectedEsignComments = auditTrailRecord.get("esignComments")
 
-    unitAdd(driver,name,description,"No")
+    #expectedTime=auditTrailRecord.get("addtime")[0:15]
+
+
+    time.sleep(3)
 
     afterCount=TestCoverageAudittrail.auditTrailRecordCount(driver)
 
-    auditActionList=driver.find_elements(By.XPATH, "//tbody[@role='presentation']/tr/td[2]")
+    logger.info("After count is "+str(afterCount))
 
-
+    auditActionList=driver.find_elements(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[2]")
 
     if afterCount==beforeCount:
         ResultCase1="FAIL"
 
-        print("Audit trail is not captured")
+        result="Audit trail is not captured"
+
+        logger.error(result)
+
 
     elif afterCount==beforeCount+1:
 
@@ -264,82 +291,129 @@ def auditTrailUnitAdd(driver,name,description,defaultStatus):
 
         ResultCase1 = "PASS"
 
-        print("Audit trail is captured")
+        result="Audit trail is captured"
 
-        actualAuditDateAndTime=driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[2]").text
+        logger.info(result)
 
-        actualAuditAction=ElementAuditTrail.auditAction(driver,i).text
+        # actualAuditDateAndTime=driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[2]").text
+        #
+        # auditTime=actualAuditDateAndTime[0:15]
+        #
+        # if expectedTime.__contains__(auditTime):
+        #     logger.info("Login time shows correctly")
+        # else:
+        #     logger.error("Time detail is not  shown correctly")
 
 
+        actualAuditAction=driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[3]").text
 
         if actualAuditAction==expectedAuditAction:
-            print("Audit action is properly mentioned")
+            logger.info("Audit action is properly mentioned")
 
         else:
             print("Audit action is not properly mentioned")
 
-        actualComments = ElementAuditTrail.auditComment(driver,i).text
+
+
+        actualComments = driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[4]").text
 
         if actualComments==expectedComments:
-            print("Comment is properly displayed")
+
+            logger.info("Comment is properly displayed")
 
         else:
             print("Comment is not displaying properly")
 
 
-        actualUserName = ElementAuditTrail.userName(driver,i).text
+        actualUserName = driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[5]").text
 
 
 
         if actualUserName==expectedUserName:
-            print("user name is properly displayed")
 
-        else:
-            print("user name is not displaying properly")
+            result="user name is properly displayed"
+
+            logger.info(result)
 
 
-        actualUserRole = ElementAuditTrail.userRole(driver,i).text
+        actualUserRole = driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[6]").text
+
 
 
 
         if actualUserRole == expectedUserRole:
-            print("user role is properly displayed")
+
+            result = "user role is properly displayed"
+
+            logger.info(result)
 
         else:
-            print("user role is not displaying properly")
+            result="user role is not displaying properly"
+            logger.error(result)
 
-        actualActionType = ElementAuditTrail.actionType(driver,i).text
+
+        actualActionType = driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[7]").text
+
+
 
 
         if actualActionType == expectedActionType:
-            print("Action type is properly displayed")
+
+
+            result = "Action type is properly displayed"
+
+
+            logger.info(result)
 
         else:
-            print("Action type is not displaying properly")
+            result = "Action type is not displaying properly"
+
+            logger.error(result)
 
 
-        actualModuleName = ElementAuditTrail.moduleName(driver,i).text
+        actualModuleName = driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[8]").text
+
+
 
         if expectedModuleName == actualModuleName:
-            print("Module name  is properly displayed")
+
+
+            result = "Module name  is properly displayed"
+
+            logger.info(result)
+
 
         else:
-            print("Module name   is not displaying properly")
 
-        actualFormName = ElementAuditTrail.formName(driver, i).text
+
+            result = "Module name   is not displaying properly"
+
+            logger.error(result)
+
+
+
+        actualFormName = driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[9]").text
+
+
 
         if actualFormName == expectedFormName:
-            print("Form name is properly displayed")
+
+
+            result = "Form name is properly displayed"
+
+            logger.info(result)
 
         else:
             print("Form name is not displaying properly")
 
-        actualEsignComments = ElementAuditTrail.esignComments(driver, i).text
+        actualEsignComments = driver.find_element(By.XPATH,"//tbody[@role='presentation']/tr[2]/td[10]").text
 
 
         if actualEsignComments == expectedEsignComments:
-            print("Esign comment is properly displayed")
 
+            result = "Esign comment is properly displayed"
+
+            logger.info(result)
         else:
             print("AEsign comment  is not displaying properly")
 
@@ -427,14 +501,55 @@ def downloadPDF(driver):
 
     time.sleep(2)
 
+    download = ConfigParser()
+    download.read(BasicOperation.projectDirectory() + "\\config.ini")
+
+    downloadPath=download.get("config", "download")
+
+    onlyfiles = [f for f in listdir(downloadPath)]
+
+    beforeCount=len(onlyfiles)
+
+    beforeCountResult="Number of folder and files before download "+str(beforeCount)
+
+    logger.info(beforeCountResult)
+
     ScreenNavigate.unit(driver)
 
     try:
         BasicOperation.clickXpath(driver,   baseMaster.get("UnitOfMeasurement", "unitDownloadPDF"))
-        LogOperation.logInfo("Clicked the Download PDF button")
+        result="Clicked the Download PDF button"
+
+        LogOperation.logInfo(result)
+
+        logger.info(result)
     except Exception as e:
-        LogOperation.logError(
-            "Unable to click the Download PDF button, It causes the exception, Exception Detail---> " + str(e))
+
+        result="Unable to click the Download PDF button, It causes the exception, Exception Detail---> " + str(e)
+
+        LogOperation.logError(result)
+
+        logger.error(result)
+
+    time.sleep(5)
+
+    onlyfiles2 = [f for f in listdir(downloadPath)]
+
+    afterCount = len(onlyfiles2)
+
+    afterCountResult = "Number of folder and files after download " + str(afterCount)
+
+    logger.info(afterCountResult)
+
+    if afterCount == beforeCount + 1:
+        logger.info("File is downloaded")
+
+    elif afterCount == beforeCount:
+        logger.error("File is not downloaded")
+
+    else:
+        logger.error("File is not downloaded properly")
+
 
     try:
         element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
@@ -446,25 +561,97 @@ def downloadPDF(driver):
 
         element.click()
 
-        LogOperation.logInfo("Clicked the basemaster icon")
+        result="Clicked the basemaster icon"
+
+        LogOperation.logInfo(result)
+
+        logger.info(result)
 
     except Exception as e:
-        LogOperation.logError("Unable to click the basemaster icon -- post condition, It causes exception-->" + str(e))
+
+        result="Unable to click the basemaster icon -- post condition, It causes exception-->" + str(e)
+        LogOperation.logError(result)
+
+        logger.error(result)
+
+
 
 
 def downloadExcel(driver):
 
+    download = ConfigParser()
+    download.read(BasicOperation.projectDirectory() + "\\config.ini")
+
+    downloadPath=download.get("config", "download")
+
+    onlyfiles = [f for f in listdir(downloadPath)]
+
+    beforeCount=len(onlyfiles)
+
+    beforeCountResult="Number of folder and files before download "+str(beforeCount)
+
+    logger.info(beforeCountResult)
+
     ScreenNavigate.unit(driver)
+
+    time.sleep(1)
 
     try:
         BasicOperation.clickXpath(driver,   baseMaster.get("UnitOfMeasurement", "unitDownloadExcel"))
-        LogOperation.logInfo("Clicked the Download Excel button")
-    except Exception as e:
-        LogOperation.logError("Unable to click the Download excel button, It causes the exception, Exception Detail---> "+str(e))
 
+        Result="Clicked the Download Excel button"
+
+        LogOperation.logInfo(Result)
+
+        logger.info(Result)
+
+
+
+    except Exception as e:
+        result="Unable to click the Download excel button, It causes the exception, Exception Detail---> "+str(e)
+        LogOperation.logError(result)
+        logger.error(result)
         time.sleep(2)
 
-        try:
+    time.sleep(5)
+
+    onlyfiles2 = [f for f in listdir(downloadPath)]
+
+    afterCount = len(onlyfiles2)
+
+    afterCountResult = "Number of folder and files after download " + str(afterCount)
+
+    logger.info(afterCountResult)
+
+    if afterCount == beforeCount + 1:
+        logger.info("File is downloaded")
+
+        onlyfiles2 = [f for f in listdir(downloadPath)]
+
+        print(onlyfiles2)
+
+        missing=None
+
+        for i in onlyfiles2:
+            for j in onlyfiles:
+                if i == j:
+                    pass
+                else:
+                    missing = i
+
+        print("missing "+missing)
+
+
+    elif afterCount == beforeCount:
+        logger.error("File is not downloaded")
+
+    else:
+        logger.error("File is not downloaded properly")
+
+
+
+
+    try:
             element = driver.find_element(By.XPATH, "//span[text()='Base Master']")
             time.sleep(2)
             try:
@@ -474,11 +661,20 @@ def downloadExcel(driver):
             time.sleep(2)
             element.click()
             time.sleep(2)
-            LogOperation.logInfo("Clicked the basemaster icon")
 
-        except Exception as e:
-            LogOperation.logError("Unable to click the basemaster icon -- post condition, It causes exception-->"+str(e))
+            result="Clicked the basemaster icon"
 
+            logger.info(result)
+
+            LogOperation.logInfo(result)
+
+    except Exception as e:
+
+            result="Unable to click the basemaster icon -- post condition, It causes exception-->"+str(e)
+
+            logger.error(result)
+
+            LogOperation.logError(result)
 
 
 def unitFilter(driver):

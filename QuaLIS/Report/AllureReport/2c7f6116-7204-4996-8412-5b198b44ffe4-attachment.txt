@@ -1,0 +1,31 @@
+D:\Agaram Technologies\Github\QuaLIS
+Browser Launched
+Link was hit
+Entered Login id
+Entered password id
+Clicked the login button
+1. Master click screenshot info is taken
+Clicked the Master Icon
+2. Base Master click screenshot is taken
+Clicked the Base Master Icon
+3. Unit click screenshot is taken
+clicked the Unit Icon
+4. screen header click  info screenshot is taken
+clicked the screen header
+Checked the data count before add the Unit detail 4 Unit details are  available in the screen
+5. Unit Add button click info screenshot is taken
+Clicked the Add button
+6. Unit name enter info screenshot is taken
+Entered the Unit name value 
+6. Unit description enter info screenshot is taken
+Entered the Unit description value 
+7. Unit default status click info screenshot is taken
+Unit default status button clicked 
+7. Unit add submit button click info screenshot is taken
+Clicked the Add submit button
+8. Unit add popup closed info screenshot is taken
+Add popup closed 
+Checked the data count after added the Unit detail, 5 Unit details are  available in the screen
+Entered Login id
+Entered password id
+Clicked the login button

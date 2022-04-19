@@ -6,7 +6,8 @@ def auditDate(driver,index):
 
 
 def auditAction(driver, index):
-    driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[{}]/td[3]".format(index))
+    element=driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[{}]/td[3]".format(index))
+    return element
 
 def auditComment(driver, index):
     driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[{}]/td[4]".format(index))

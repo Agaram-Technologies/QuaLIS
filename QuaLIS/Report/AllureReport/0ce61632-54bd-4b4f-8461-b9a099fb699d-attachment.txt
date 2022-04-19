@@ -1,0 +1,10 @@
+before count-->6
+unitrow 100 100ds Yes
+100 100des No
+unit edit Matched at 1
+containertype count is 1 100 100ds Yes
+1
+1 - 5 of 6
+afterCount-->6
+New data is not created
+Edit is working properly to the count

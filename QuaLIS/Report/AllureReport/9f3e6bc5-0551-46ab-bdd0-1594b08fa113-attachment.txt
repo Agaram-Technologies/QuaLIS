@@ -1,0 +1,54 @@
+[31m[1mERROR   [0m root:LogOperation.py:20 Unable to click the Master icon
+[31m[1mERROR   [0m root:LogOperation.py:20 Unable to click the Base Master icon
+[31m[1mERROR   [0m root:LogOperation.py:20 Unable to click the unit icon
+[31m[1mERROR   [0m root:LogOperation.py:20 Unable to click the Download PDF button, It causes the exception, Exception Detail---> Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.88)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x005B9943+2595139]
+	Ordinal0 [0x0054C9F1+2148849]
+	Ordinal0 [0x00444528+1066280]
+	Ordinal0 [0x0042C640+968256]
+	Ordinal0 [0x0048E259+1368665]
+	Ordinal0 [0x0049B292+1421970]
+	Ordinal0 [0x0048B806+1357830]
+	Ordinal0 [0x00466086+1204358]
+	Ordinal0 [0x00466F96+1208214]
+	GetHandleVerifier [0x0075B232+1658114]
+	GetHandleVerifier [0x0081312C+2411516]
+	GetHandleVerifier [0x0064F261+560433]
+	GetHandleVerifier [0x0064E366+556598]
+	Ordinal0 [0x0055286B+2173035]
+	Ordinal0 [0x005575F8+2192888]
+	Ordinal0 [0x005576E5+2193125]
+	Ordinal0 [0x005611FC+2232828]
+	BaseThreadInitThunk [0x75676739+25]
+	RtlGetFullPathName_UEx [0x770A8E7F+1215]
+	RtlGetFullPathName_UEx [0x770A8E4D+1165]
+
+[31m[1mERROR   [0m root:LogOperation.py:20 Unable to click the basemaster icon -- post condition, It causes exception-->Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=100.0.4896.88)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x005B9943+2595139]
+	Ordinal0 [0x0054C9F1+2148849]
+	Ordinal0 [0x00444528+1066280]
+	Ordinal0 [0x0042C640+968256]
+	Ordinal0 [0x0048E259+1368665]
+	Ordinal0 [0x0049B292+1421970]
+	Ordinal0 [0x0048B806+1357830]
+	Ordinal0 [0x00466086+1204358]
+	Ordinal0 [0x00466F96+1208214]
+	GetHandleVerifier [0x0075B232+1658114]
+	GetHandleVerifier [0x0081312C+2411516]
+	GetHandleVerifier [0x0064F261+560433]
+	GetHandleVerifier [0x0064E366+556598]
+	Ordinal0 [0x0055286B+2173035]
+	Ordinal0 [0x005575F8+2192888]
+	Ordinal0 [0x005576E5+2193125]
+	Ordinal0 [0x005611FC+2232828]
+	BaseThreadInitThunk [0x75676739+25]
+	RtlGetFullPathName_UEx [0x770A8E7F+1215]
+	RtlGetFullPathName_UEx [0x770A8E4D+1165]

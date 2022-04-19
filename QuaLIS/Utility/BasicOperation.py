@@ -55,7 +55,7 @@ def projectDirectory():
 
     projectDirectory=projectDirectory[1:]
 
-    print(projectDirectory)
+
 
     return projectDirectory
 

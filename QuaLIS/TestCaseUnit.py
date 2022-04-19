@@ -27,8 +27,6 @@ def preCondition():
     driver = BrowserOperation.launchLIMS()
 
 
-
-
 def test_unitAdd(preCondition):
 
     AddAllFieldDefaultYes.addFieldValueDefaultYes(driver, ElementUnit.elementUnit(),ScreenshotUnit.screenshotUnitAddAllFieldDefaultYes(), TestDataUnit.unit())
@@ -46,18 +44,16 @@ def test_unitDelete():
     BrowserOperation.refreshLogin(driver)
     time.sleep(2)
 
-
-def test_exportPDF():
+def test_exportEXCEL():
     TestCoverageUnit.downloadExcel(driver)
     BrowserOperation.refreshLogin(driver)
     time.sleep(2)
 
-
-def test_exportEXCEL():
+def test_exportPDF():
     TestCoverageUnit.downloadPDF(driver)
     BrowserOperation.refreshLogin(driver)
     time.sleep(2)
-
+'''
 
 
 def test_auditTrailUnitAdd():
@@ -77,3 +73,4 @@ def test_filter():
 
 
 
+'''

@@ -1,0 +1,4 @@
+2022-04-18 12:58:34.045 | INFO     | Utility.BrowserOperation:refreshLogin:75 - Refresh-->Entered Login id
+2022-04-18 12:58:34.198 | INFO     | Utility.BrowserOperation:refreshLogin:83 - Refresh-->Entered password id
+2022-04-18 12:58:34.536 | INFO     | Utility.BrowserOperation:refreshLogin:102 - Refresh-->Clicked the login button
+2022-04-18 12:58:34.754 | INFO     | Utility.BrowserOperation:refreshLogin:110 - Refresh Login-->, clicked pin icon

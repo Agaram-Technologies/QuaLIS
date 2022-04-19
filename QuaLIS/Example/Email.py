@@ -1,10 +1,3 @@
-from CommonMethodNameDescriptionDefaultStatus import AddAllFieldDefaultYes
-from Config.ScreenshotPath import ScreenshotUnit
-from ObjectRepository.BaseMaster import ElementUnit
-from TestData import TestDataUnit
-from Utility import BrowserOperation
 
-driver=BrowserOperation.launchLIMS()
-
-AddAllFieldDefaultYes.addFieldValueDefaultYes(driver, ElementUnit.elementUnit(),
-                                              ScreenshotUnit.screenshotUnitAddAllFieldDefaultYes(), TestDataUnit.unit())
+import patoolib
+patoolib.extract_archive("D:\\python\\exercise\\new3\\New Text Document.rar", outdir="D:\\python\\exercise\\")

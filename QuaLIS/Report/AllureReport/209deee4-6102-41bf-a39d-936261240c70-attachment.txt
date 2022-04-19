@@ -1,0 +1,10 @@
+before count-->5
+unit delete Matched at 1
+unit count is 1 200 100ds Yes
+1
+(//span[@data-tip='Delete'])[1]
+afterCount-->4
+Unit Delete is working properly
+Entered Login id
+Entered password id
+Clicked the login button
