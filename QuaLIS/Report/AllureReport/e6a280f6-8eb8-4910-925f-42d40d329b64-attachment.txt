@@ -1,0 +1,12 @@
+2022-04-22 14:28:36.528 | INFO     | TestCoverage.TestCoverageUnit:downloadPDF:715 - Number of folder and files before download 250
+2022-04-22 14:28:36.630 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 14:28:36.703 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 14:28:36.882 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 14:28:37.230 | INFO     | TestCoverage.TestCoverageUnit:downloadPDF:725 - Clicked the Download PDF button
+2022-04-22 14:28:42.246 | INFO     | TestCoverage.TestCoverageUnit:downloadPDF:742 - Number of folder and files after download 251
+2022-04-22 14:28:42.248 | INFO     | TestCoverage.TestCoverageUnit:downloadPDF:745 - File is downloaded
+2022-04-22 14:28:42.437 | INFO     | TestCoverage.TestCoverageUnit:downloadPDF:768 - Clicked the basemaster icon
+2022-04-22 14:28:42.920 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-22 14:28:43.015 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-22 14:28:43.258 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-22 14:28:43.471 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

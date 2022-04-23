@@ -1,0 +1,18 @@
+2022-04-22 13:14:32.802 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 13:14:32.867 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 13:14:32.988 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 13:14:33.069 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:219 - Got the count before edit the unit detail
+2022-04-22 13:14:33.096 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:249 - Old file is available at 1 index
+2022-04-22 13:14:33.203 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:255 - Clicked the edit icon
+2022-04-22 13:14:33.367 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:264 - cleared the old unit description
+2022-04-22 13:14:33.437 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:271 - cleared the old unit name
+2022-04-22 13:14:33.472 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:279 - cleared the old unit description
+2022-04-22 13:14:33.605 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:287 - Entered the new name
+2022-04-22 13:14:33.667 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:297 - Clicked  the add submit button
+2022-04-22 13:14:33.778 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:307 - Edit popup is closed
+2022-04-22 13:14:35.818 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:331 - New data is not created
+2022-04-22 13:14:35.818 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:332 - Edit is working properly to the count
+2022-04-22 13:14:36.198 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-22 13:14:36.315 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-22 13:14:36.681 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-22 13:14:36.882 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

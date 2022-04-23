@@ -1,0 +1,3 @@
+2022-04-22 15:25:34.197 | ERROR    | Utility.ScreenNavigate:unit:35 - Unable to click the Master icon
+2022-04-22 15:25:46.364 | ERROR    | Utility.ScreenNavigate:unit:51 - Unable to click base master icon
+2022-04-22 15:25:58.546 | ERROR    | Utility.ScreenNavigate:unit:67 - unable to click unit icon

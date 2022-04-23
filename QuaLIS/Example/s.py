@@ -1,29 +1,25 @@
-
-def unitAdd():
-
-  list2=["a","b","c"]
-
-  list1=["a","c"]
-
-  list1String=""
-
-  for i in list1:
-      list1String=list1String+str(i)
-
-  for i in list2:
-      if list1String.__contains__(i):
-          pass
-      else:
-          print(i)
-
-
-unitAdd()
+from Utility import tc
 
 
 
+from configparser import ConfigParser
+
+from loguru import logger
+from selenium.webdriver.common.by import By
+
+from ObjectRepository import ElementAuditTrail
+from TestCoverage import TestCoverageAudittrail, TestCoverageUnit
+from Utility import JDBC, BasicOperation, BrowserOperation
+
+configDriver=ConfigParser()
+configDriver.read(BasicOperation.projectDirectory()+"\\config.ini")
+
+id=configDriver.get("Credential", "loginid")
+oldName="unique"
+
+newName="unique1"
+
+driver=BrowserOperation.launchLIMS()
 
 
-
-
-
-
+tc.auditTrailUnitEdit(driver,oldName,oldName,newName,newName,"d")

@@ -1,0 +1,5 @@
+2022-04-22 15:21:39.526 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:84 - Unable to Click the master icon
+2022-04-22 15:21:51.727 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:95 - Unable to click the User management icon
+2022-04-22 15:22:05.915 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:111 - Unable to click the audit trail screen icon
+2022-04-22 15:22:33.325 | ERROR    | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:47 - Unable to get the count in the Audit trail screen
+2022-04-22 15:22:45.506 | ERROR    | Utility.ScreenNavigate:auditTrailPostCondition:132 - Unable to click the User management icon

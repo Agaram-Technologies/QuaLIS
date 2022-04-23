@@ -1,0 +1,4 @@
+[1m[31mERROR   [0m root:LogOperation.py:20 Unable to click the Master icon
+[1m[31mERROR   [0m root:LogOperation.py:20 Unable to click the User management icon
+[1m[31mERROR   [0m root:LogOperation.py:20 Unable to click the Audit trail icon
+[1m[31mERROR   [0m root:LogOperation.py:20 Unable to click the User management icon

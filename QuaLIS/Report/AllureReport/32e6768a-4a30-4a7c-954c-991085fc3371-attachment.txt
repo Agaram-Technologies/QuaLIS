@@ -1,0 +1,69 @@
+2022-04-22 13:15:28.239 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-22 13:15:28.280 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-22 13:15:30.401 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-22 13:15:30.541 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 373 record in the grid
+2022-04-22 13:15:30.641 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon
+2022-04-22 13:15:30.686 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 13:15:30.767 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 13:15:30.879 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 13:15:30.949 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:219 - Got the count before edit the unit detail
+2022-04-22 13:15:30.971 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:249 - Old file is available at 1 index
+2022-04-22 13:15:31.100 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:255 - Clicked the edit icon
+2022-04-22 13:15:31.184 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:264 - cleared the old unit description
+2022-04-22 13:15:31.252 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:271 - cleared the old unit name
+2022-04-22 13:15:31.285 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:279 - cleared the old unit description
+2022-04-22 13:15:31.404 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:287 - Entered the new name
+2022-04-22 13:15:31.498 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:297 - Clicked  the add submit button
+2022-04-22 13:15:31.589 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:307 - Edit popup is closed
+2022-04-22 13:15:33.615 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:331 - New data is not created
+2022-04-22 13:15:33.615 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:332 - Edit is working properly to the count
+2022-04-22 13:15:33.703 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1004 - expectedAuditAction is--->EDIT UNIT
+2022-04-22 13:15:33.703 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1008 - expectedComments is--->Unit Name: 100-> 200;
+2022-04-22 13:15:33.703 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1012 - expectedUserName is--->Admin Admin
+2022-04-22 13:15:33.704 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1017 - expectedUserRole is--->Admin
+2022-04-22 13:15:33.704 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1022 - expectedActionType is--->SYSTEM
+2022-04-22 13:15:33.704 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1027 - expectedModuleName is--->Base Master
+2022-04-22 13:15:33.704 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1032 - expectedFormName is--->Unit of Measurement
+2022-04-22 13:15:33.704 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1037 - expectedEsignComments is--->
+2022-04-22 13:15:33.762 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-22 13:15:33.783 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-22 13:15:35.936 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-22 13:15:36.050 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 374 record in the grid
+2022-04-22 13:15:36.143 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon
+2022-04-22 13:15:36.160 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1054 - Audit trail is captured
+2022-04-22 13:15:36.208 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1063 - Audit action is properly mentioned in UI
+2022-04-22 13:15:36.217 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1073 - Audit action is properly mentioned in db
+2022-04-22 13:15:36.218 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1079 - Audit action is same in the db and ui
+2022-04-22 13:15:36.252 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1088 - Audit comment is properly mentioned in UI
+2022-04-22 13:15:36.279 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1100 - user name is properly mentioned in UI
+2022-04-22 13:15:36.306 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1113 - user role is properly mentioned in UI
+2022-04-22 13:15:36.310 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1125 - user role is properly mentioned in db
+2022-04-22 13:15:36.310 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1131 - user role is same in the db and ui
+2022-04-22 13:15:36.334 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1141 - action type is properly mentioned in UI
+2022-04-22 13:15:36.341 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1152 - action type is properly mentioned in db
+2022-04-22 13:15:36.341 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1158 - action type is same in the db and ui
+2022-04-22 13:15:36.359 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1166 - Module name is properly mentioned in UI
+2022-04-22 13:15:36.371 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1180 - module is not properly mentioned db
+2022-04-22 13:15:36.371 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1181 - Expected ---> Base Master
+2022-04-22 13:15:36.371 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1182 - Actual   ---> Base Master
+2022-04-22 13:15:36.371 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1185 - module is same in the db and ui
+2022-04-22 13:15:36.386 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1198 - form name  is not properly mentioned in UI
+2022-04-22 13:15:36.386 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1200 - Expected ---> Unit of Measurement
+2022-04-22 13:15:36.386 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1201 - Actual   ---> Unit of Measurement
+2022-04-22 13:15:36.403 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1212 - form is not properly mentioned db
+2022-04-22 13:15:36.403 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1213 - Expected ---> Unit of Measurement
+2022-04-22 13:15:36.403 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1214 - Actual   ---> Certificate Type
+2022-04-22 13:15:36.403 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1219 - form is not same in the db and ui
+2022-04-22 13:15:36.403 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1220 - UI ---> Unit of Measurement
+2022-04-22 13:15:36.403 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1221 - DB   ---> Certificate Type
+2022-04-22 13:15:36.438 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1231 - Esign comment name  is not properly mentioned in UI
+2022-04-22 13:15:36.439 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1232 - Expected ---> 
+2022-04-22 13:15:36.440 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1233 - Actual   ---> 
+2022-04-22 13:15:36.448 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1244 - Esign comment is not properly mentioned db
+2022-04-22 13:15:36.449 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1245 - Expected ---> 
+2022-04-22 13:15:36.449 | ERROR    | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1246 - Actual   ---> 
+2022-04-22 13:15:36.449 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1249 - Esign comment is same in the db and ui
+2022-04-22 13:15:38.908 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-22 13:15:39.013 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-22 13:15:39.387 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-22 13:15:39.649 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

@@ -1,0 +1,28 @@
+1. Master click error screenshot is taken
+Unable to click the Master Icon, It causes Exception --> Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@data-rb-event-key='MenuId_1']"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01179943+2595139]
+	Ordinal0 [0x0110C9F1+2148849]
+	Ordinal0 [0x01004528+1066280]
+	Ordinal0 [0x01030FD4+1249236]
+	Ordinal0 [0x010311CB+1249739]
+	Ordinal0 [0x0105D812+1431570]
+	Ordinal0 [0x0104BA34+1358388]
+	Ordinal0 [0x0105BAF2+1424114]
+	Ordinal0 [0x0104B806+1357830]
+	Ordinal0 [0x01026086+1204358]
+	Ordinal0 [0x01026F96+1208214]
+	GetHandleVerifier [0x0131B232+1658114]
+	GetHandleVerifier [0x013D312C+2411516]
+	GetHandleVerifier [0x0120F261+560433]
+	GetHandleVerifier [0x0120E366+556598]
+	Ordinal0 [0x0111286B+2173035]
+	Ordinal0 [0x011175F8+2192888]
+	Ordinal0 [0x011176E5+2193125]
+	Ordinal0 [0x011211FC+2232828]
+	BaseThreadInitThunk [0x76C96739+25]
+	RtlGetFullPathName_UEx [0x76FF8E7F+1215]
+	RtlGetFullPathName_UEx [0x76FF8E4D+1165]
+

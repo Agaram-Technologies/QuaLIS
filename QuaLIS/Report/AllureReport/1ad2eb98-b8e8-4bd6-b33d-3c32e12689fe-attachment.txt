@@ -1,0 +1,2 @@
+[1m[31mERROR   [0m root:LogOperation.py:20 Unable to click the Master icon
+[1m[31mERROR   [0m root:LogOperation.py:20 Unable to click the Base Master icon

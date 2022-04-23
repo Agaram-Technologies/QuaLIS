@@ -1,0 +1,6 @@
+2022-04-22 23:07:42.407 | INFO     | Utility.BrowserOperation:launchLIMS:30 - Browser Launched
+2022-04-22 23:07:46.965 | INFO     | Utility.BrowserOperation:launchLIMS:52 - Hit the link
+2022-04-22 23:07:47.029 | INFO     | Utility.BrowserOperation:launchLIMS:77 - Entered the login id
+2022-04-22 23:07:47.133 | INFO     | Utility.BrowserOperation:launchLIMS:92 - Entered the password detail
+2022-04-22 23:07:48.181 | INFO     | Utility.BrowserOperation:launchLIMS:102 - Clicked the login button
+2022-04-22 23:08:08.205 | ERROR    | Utility.BrowserOperation:launchLIMS:118 - Launch lims - Unable to Click the pin icon

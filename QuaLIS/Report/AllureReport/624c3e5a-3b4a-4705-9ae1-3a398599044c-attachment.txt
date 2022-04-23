@@ -1,0 +1,4 @@
+2022-04-22 15:16:18.740 | ERROR    | Utility.ScreenNavigate:unit:35 - Unable to click the Master icon
+2022-04-22 15:16:30.920 | ERROR    | Utility.ScreenNavigate:unit:51 - Unable to click base master icon
+2022-04-22 15:16:43.103 | ERROR    | Utility.ScreenNavigate:unit:67 - unable to click unit icon
+2022-04-22 15:17:10.436 | ERROR    | TestCoverage.TestCoverageUnit:unitEdit:235 - undefined

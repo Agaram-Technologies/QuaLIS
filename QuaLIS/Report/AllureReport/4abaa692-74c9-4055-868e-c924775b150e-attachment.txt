@@ -1,0 +1,10 @@
+2022-04-22 14:27:55.720 | INFO     | Utility.BrowserOperation:launchLIMS:30 - Browser Launched
+2022-04-22 14:27:56.776 | INFO     | Utility.BrowserOperation:launchLIMS:52 - Hit the link
+2022-04-22 14:27:56.845 | INFO     | Utility.BrowserOperation:launchLIMS:77 - Entered the login id
+2022-04-22 14:27:56.948 | INFO     | Utility.BrowserOperation:launchLIMS:92 - Entered the password detail
+2022-04-22 14:27:58.016 | INFO     | Utility.BrowserOperation:launchLIMS:102 - Clicked the login button
+2022-04-22 14:27:58.771 | INFO     | Utility.BrowserOperation:launchLIMS:114 - Launch lims - Clicked the pin icon
+2022-04-22 14:28:09.777 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-22 14:28:09.866 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-22 14:28:10.199 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-22 14:28:10.565 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

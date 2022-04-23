@@ -1,9 +1,0 @@
-2022-04-18 12:58:42.183 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:521 - Number of folder and files before download 198
-2022-04-18 12:58:43.462 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:534 - Clicked the Download Excel button
-2022-04-18 12:58:48.475 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:552 - Number of folder and files after download 199
-2022-04-18 12:58:48.476 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:555 - File is downloaded
-2022-04-18 12:58:54.536 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:577 - Clicked the basemaster icon
-2022-04-18 12:58:54.889 | INFO     | Utility.BrowserOperation:refreshLogin:75 - Refresh-->Entered Login id
-2022-04-18 12:58:55.007 | INFO     | Utility.BrowserOperation:refreshLogin:83 - Refresh-->Entered password id
-2022-04-18 12:58:55.270 | INFO     | Utility.BrowserOperation:refreshLogin:102 - Refresh-->Clicked the login button
-2022-04-18 12:58:55.626 | INFO     | Utility.BrowserOperation:refreshLogin:110 - Refresh Login-->, clicked pin icon

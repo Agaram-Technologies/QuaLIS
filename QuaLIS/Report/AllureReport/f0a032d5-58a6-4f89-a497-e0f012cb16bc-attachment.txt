@@ -1,0 +1,80 @@
+2022-04-22 15:18:40.703 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:793 - Number of folder and files before download 253
+2022-04-22 15:18:52.901 | ERROR    | Utility.ScreenNavigate:unit:35 - Unable to click the Master icon
+2022-04-22 15:19:05.099 | ERROR    | Utility.ScreenNavigate:unit:51 - Unable to click base master icon
+2022-04-22 15:19:17.286 | ERROR    | Utility.ScreenNavigate:unit:67 - unable to click unit icon
+2022-04-22 15:19:30.428 | ERROR    | TestCoverage.TestCoverageUnit:downloadExcel:811 - Unable to click the Download excel button, It causes the exception, Exception Detail---> Message: chrome not reachable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E59943+2595139]
+	Ordinal0 [0x00DEC9F1+2148849]
+	Ordinal0 [0x00CE43F0+1065968]
+	Ordinal0 [0x00CD87C2+1017794]
+	Ordinal0 [0x00CD8FF8+1019896]
+	Ordinal0 [0x00CDA892+1026194]
+	Ordinal0 [0x00CD4219+999961]
+	Ordinal0 [0x00CE5860+1071200]
+	Ordinal0 [0x00D3B2D2+1422034]
+	Ordinal0 [0x00D2B806+1357830]
+	Ordinal0 [0x00D06086+1204358]
+	Ordinal0 [0x00D06F96+1208214]
+	GetHandleVerifier [0x00FFB232+1658114]
+	GetHandleVerifier [0x010B312C+2411516]
+	GetHandleVerifier [0x00EEF261+560433]
+	GetHandleVerifier [0x00EEE366+556598]
+	Ordinal0 [0x00DF286B+2173035]
+	Ordinal0 [0x00DF75F8+2192888]
+	Ordinal0 [0x00DF76E5+2193125]
+	Ordinal0 [0x00E011FC+2232828]
+	BaseThreadInitThunk [0x76C96739+25]
+	RtlGetFullPathName_UEx [0x76FF8E7F+1215]
+	RtlGetFullPathName_UEx [0x76FF8E4D+1165]
+
+2022-04-22 15:19:32.442 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 0.0 seconds
+2022-04-22 15:19:32.945 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 0.5 seconds
+2022-04-22 15:19:33.450 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 1.0 seconds
+2022-04-22 15:19:33.951 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 1.5 seconds
+2022-04-22 15:19:34.454 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 2.0 seconds
+2022-04-22 15:19:34.968 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 2.5 seconds
+2022-04-22 15:19:35.477 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 3.0 seconds
+2022-04-22 15:19:35.983 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 3.5 seconds
+2022-04-22 15:19:36.497 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 4.0 seconds
+2022-04-22 15:19:37.001 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 4.5 seconds
+2022-04-22 15:19:37.512 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 5.0 seconds
+2022-04-22 15:19:38.022 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 5.5 seconds
+2022-04-22 15:19:38.526 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 6.0 seconds
+2022-04-22 15:19:39.041 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 6.5 seconds
+2022-04-22 15:19:39.555 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 7.0 seconds
+2022-04-22 15:19:40.068 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 7.5 seconds
+2022-04-22 15:19:40.583 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 8.0 seconds
+2022-04-22 15:19:41.096 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 8.5 seconds
+2022-04-22 15:19:41.606 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 9.0 seconds
+2022-04-22 15:19:42.122 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 9.5 seconds
+2022-04-22 15:19:54.832 | ERROR    | TestCoverage.TestCoverageUnit:downloadExcel:946 - Unable to click the basemaster icon -- post condition, It causes exception-->Message: chrome not reachable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E59943+2595139]
+	Ordinal0 [0x00DEC9F1+2148849]
+	Ordinal0 [0x00CE43F0+1065968]
+	Ordinal0 [0x00CD87C2+1017794]
+	Ordinal0 [0x00CD8FF8+1019896]
+	Ordinal0 [0x00CDA892+1026194]
+	Ordinal0 [0x00CD4219+999961]
+	Ordinal0 [0x00CE5860+1071200]
+	Ordinal0 [0x00D3B2D2+1422034]
+	Ordinal0 [0x00D2B806+1357830]
+	Ordinal0 [0x00D06086+1204358]
+	Ordinal0 [0x00D06F96+1208214]
+	GetHandleVerifier [0x00FFB232+1658114]
+	GetHandleVerifier [0x010B312C+2411516]
+	GetHandleVerifier [0x00EEF261+560433]
+	GetHandleVerifier [0x00EEE366+556598]
+	Ordinal0 [0x00DF286B+2173035]
+	Ordinal0 [0x00DF75F8+2192888]
+	Ordinal0 [0x00DF76E5+2193125]
+	Ordinal0 [0x00E011FC+2232828]
+	BaseThreadInitThunk [0x76C96739+25]
+	RtlGetFullPathName_UEx [0x76FF8E7F+1215]
+	RtlGetFullPathName_UEx [0x76FF8E4D+1165]
+

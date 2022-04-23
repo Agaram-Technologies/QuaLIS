@@ -1,0 +1,14 @@
+2022-04-22 14:28:19.010 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 14:28:19.072 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 14:28:19.196 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 14:28:19.313 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:91 - Got the count before delete, Count is 8
+2022-04-22 14:28:19.338 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:118 - Data is available in the grid index
+2022-04-22 14:28:19.392 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:125 - Clicked the delete button
+2022-04-22 14:28:19.501 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:131 - Clicked the delete confirmation button
+2022-04-22 14:28:21.528 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:166 - Got the count before delete, Count is 7
+2022-04-22 14:28:21.528 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:187 - Unit delete is working
+2022-04-22 14:28:21.592 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:192 - Delete is updated in the database, Now nstatus is -1
+2022-04-22 14:28:24.105 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-22 14:28:24.219 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-22 14:28:24.604 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-22 14:28:24.862 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

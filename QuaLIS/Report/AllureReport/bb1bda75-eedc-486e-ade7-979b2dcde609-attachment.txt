@@ -1,0 +1,5 @@
+2022-04-22 13:10:10.807 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-22 13:10:10.857 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-22 13:10:13.029 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-22 13:10:13.192 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 348 record in the grid
+2022-04-22 13:10:13.264 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon

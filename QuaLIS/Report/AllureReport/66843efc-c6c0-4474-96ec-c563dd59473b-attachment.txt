@@ -1,0 +1,3 @@
+Admin
+Admin
+(//span[@data-tip='Delete'])[1]

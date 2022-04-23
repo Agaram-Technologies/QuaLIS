@@ -1,0 +1,23 @@
+2022-04-22 13:10:13.459 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-22 13:10:13.502 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-22 13:10:15.629 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-22 13:10:15.648 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 348 record in the grid
+2022-04-22 13:10:15.720 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon
+2022-04-22 13:10:15.743 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 13:10:15.798 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 13:10:15.920 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 13:10:16.010 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:219 - Got the count before edit the unit detail
+2022-04-22 13:10:16.033 | ERROR    | TestCoverage.TestCoverageUnit:unitEdit:355 - The old name is not available in the grid
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1004 - expectedAuditAction is--->EDIT UNIT
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1008 - expectedComments is--->Unit Name: 100-> 200;
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1012 - expectedUserName is--->Admin Admin
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1017 - expectedUserRole is--->Admin
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1022 - expectedActionType is--->SYSTEM
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1027 - expectedModuleName is--->Base Master
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1032 - expectedFormName is--->Unit of Measurement
+2022-04-22 13:10:16.033 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1037 - expectedEsignComments is--->
+2022-04-22 13:10:16.074 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-22 13:10:27.164 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:95 - Unable to click the User management icon
+2022-04-22 13:10:32.249 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:111 - Unable to click the audit trail screen icon
+2022-04-22 13:10:41.332 | ERROR    | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:47 - Unable to get the count in the Audit trail screen
+2022-04-22 13:10:41.426 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon

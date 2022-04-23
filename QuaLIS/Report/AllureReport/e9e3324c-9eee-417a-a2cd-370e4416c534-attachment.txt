@@ -1,0 +1,60 @@
+2022-04-22 23:15:20.692 | INFO     | TestCoverage.TestCoverageUnit:downloadPDF:717 - Number of folder and files before download 257
+2022-04-22 23:15:40.703 | ERROR    | Utility.ScreenNavigate:unit:35 - Unable to click the Master icon
+2022-04-22 23:16:00.737 | ERROR    | Utility.ScreenNavigate:unit:51 - Unable to click base master icon
+2022-04-22 23:16:20.767 | ERROR    | Utility.ScreenNavigate:unit:67 - unable to click unit icon
+2022-04-22 23:16:40.826 | ERROR    | TestCoverage.TestCoverageUnit:downloadPDF:734 - Unable to click the Download PDF button, It causes the exception, Exception Detail---> Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-tip='Download PDF']"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01179943+2595139]
+	Ordinal0 [0x0110C9F1+2148849]
+	Ordinal0 [0x01004528+1066280]
+	Ordinal0 [0x01030FD4+1249236]
+	Ordinal0 [0x010311CB+1249739]
+	Ordinal0 [0x0105D812+1431570]
+	Ordinal0 [0x0104BA34+1358388]
+	Ordinal0 [0x0105BAF2+1424114]
+	Ordinal0 [0x0104B806+1357830]
+	Ordinal0 [0x01026086+1204358]
+	Ordinal0 [0x01026F96+1208214]
+	GetHandleVerifier [0x0131B232+1658114]
+	GetHandleVerifier [0x013D312C+2411516]
+	GetHandleVerifier [0x0120F261+560433]
+	GetHandleVerifier [0x0120E366+556598]
+	Ordinal0 [0x0111286B+2173035]
+	Ordinal0 [0x011175F8+2192888]
+	Ordinal0 [0x011176E5+2193125]
+	Ordinal0 [0x011211FC+2232828]
+	BaseThreadInitThunk [0x76C96739+25]
+	RtlGetFullPathName_UEx [0x76FF8E7F+1215]
+	RtlGetFullPathName_UEx [0x76FF8E4D+1165]
+
+2022-04-22 23:16:45.838 | INFO     | TestCoverage.TestCoverageUnit:downloadPDF:744 - Number of folder and files after download 257
+2022-04-22 23:16:45.838 | ERROR    | TestCoverage.TestCoverageUnit:downloadPDF:750 - File is not downloaded
+2022-04-22 23:17:05.860 | ERROR    | TestCoverage.TestCoverageUnit:downloadPDF:777 - Unable to click the basemaster icon -- post condition, It causes exception-->Message: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Base Master']"}
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01179943+2595139]
+	Ordinal0 [0x0110C9F1+2148849]
+	Ordinal0 [0x01004528+1066280]
+	Ordinal0 [0x01030FD4+1249236]
+	Ordinal0 [0x010311CB+1249739]
+	Ordinal0 [0x0105D812+1431570]
+	Ordinal0 [0x0104BA34+1358388]
+	Ordinal0 [0x0105BAF2+1424114]
+	Ordinal0 [0x0104B806+1357830]
+	Ordinal0 [0x01026086+1204358]
+	Ordinal0 [0x01026F96+1208214]
+	GetHandleVerifier [0x0131B232+1658114]
+	GetHandleVerifier [0x013D312C+2411516]
+	GetHandleVerifier [0x0120F261+560433]
+	GetHandleVerifier [0x0120E366+556598]
+	Ordinal0 [0x0111286B+2173035]
+	Ordinal0 [0x011175F8+2192888]
+	Ordinal0 [0x011176E5+2193125]
+	Ordinal0 [0x011211FC+2232828]
+	BaseThreadInitThunk [0x76C96739+25]
+	RtlGetFullPathName_UEx [0x76FF8E7F+1215]
+	RtlGetFullPathName_UEx [0x76FF8E4D+1165]
+

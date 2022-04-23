@@ -20,59 +20,66 @@ newName="200"
 newDescription="200ds"
 
 
-driver = BrowserOperation.launchLIMS()
 
-TestCoverageStorageCondition.downloadPDF(driver)
+import time
 
-TestCoverageStorageCondition.downloadExcel(driver)
+import pytest
 
-TestCoverageStorageCondition.storageConditionAdd(driver,oldName,oldDescription,"yes")
-BrowserOperation.refreshLogin(driver)
+import allure
 
-TestCoverageStorageCondition.storageConditionEdit(driver,oldName,oldDescription,"No",newName,newDescription)
-BrowserOperation.refreshLogin(driver)
+from CommonMethodNameDescriptionDefaultStatus import AddAllFieldDefaultYes
+from Config.ScreenshotPath import ScreenshotUnit
+from ObjectRepository.BaseMaster import ElementUnit
+from TestCoverage import TestCoverageUnit
+from TestData import TestDataUnit
+from Utility import BrowserOperation
 
-TestCoverageStorageCondition.storageConditionDelete(driver, newName, newDescription, "Yes")
-BrowserOperation.refreshLogin(driver)
+oldName="100"
 
-'''
-def test_unitEdit():
-    TestCoverageUnit.unitEdit(driver, oldName, oldDescription, "No", newName, newDescription)
+oldDescription="100des"
+
+newName="200"
+
+newDescription="200ds"
+
+
+
+@pytest.fixture(scope="function")
+def preCondition():
+    global driver
+    driver = BrowserOperation.launchLIMS()
+
+
+def test_Add(preCondition):
+
+    TestCoverageStorageCondition.storageConditionAdd(driver, oldName, oldDescription, "yes")
     BrowserOperation.refreshLogin(driver)
-    time.sleep(2)
 
 
-def test_unitDelete():
-    TestCoverageUnit.unitDelete(driver, newName, newDescription, "Yes")
+
+
+def test_Edit():
+    TestCoverageStorageCondition.storageConditionEdit(driver, oldName, oldDescription, "No", newName, newDescription)
     BrowserOperation.refreshLogin(driver)
+
+
+
+def test_Delete():
+    TestCoverageStorageCondition.storageConditionDelete(driver, newName, newDescription, "Yes")
+    BrowserOperation.refreshLogin(driver)
+
     time.sleep(2)
 
 def test_exportEXCEL():
-    TestCoverageUnit.downloadExcel(driver)
+
+    TestCoverageStorageCondition.downloadExcel(driver)
     BrowserOperation.refreshLogin(driver)
     time.sleep(2)
 
 def test_exportPDF():
-    TestCoverageUnit.downloadPDF(driver)
+    TestCoverageStorageCondition.downloadPDF(driver)
+
     BrowserOperation.refreshLogin(driver)
     time.sleep(2)
 
 
-def test_auditTrailUnitAdd():
-    TestCoverageUnit.auditTrailUnitAdd(driver,oldName,oldDescription,"No")
-
-
-def test_auditTrailUnitEdit():
-    TestCoverageUnit.auditTrailUnitEdit(driver, oldName, oldDescription, newName, newDescription, "oldDefaultStatus")
-
-def test_auditTrailUnitDelete():
-    TestCoverageUnit.auditTrailUnitDelete(driver, oldName, oldDescription, "No")
-
-def test_filter():
-    TestCoverageUnit.unitFilter(driver)
-
-
-
-
-
-'''

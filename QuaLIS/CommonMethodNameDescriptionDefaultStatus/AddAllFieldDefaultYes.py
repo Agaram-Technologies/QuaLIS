@@ -6,7 +6,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from Config import ObjectName
 from Config.ScreenshotPath import ScreenshotUnit, ScreenshotName
-from Utility import BasicOperation, LogOperation, BrowserOperation
+from Utility import BasicOperation, LogOperation, BrowserOperation, JDBC
+
 
 def addFieldValueDefaultYes(driver,element,screenshot,value):
 
@@ -468,6 +469,8 @@ def addFieldValueDefaultYes(driver,element,screenshot,value):
 
                navigatePermission="PASS"
 
+               JDBC.name(value.get("name"))
+
           except Exception as e:
 
                try:
@@ -489,6 +492,8 @@ def addFieldValueDefaultYes(driver,element,screenshot,value):
                          print("8. " + screen + " add popup close error screenshot not taken")
 
                except:
+
+
                     result ="Undefined"
                     navigatePermission="FAIL"
 

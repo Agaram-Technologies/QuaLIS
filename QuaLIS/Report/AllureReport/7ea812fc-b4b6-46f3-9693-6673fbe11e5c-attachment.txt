@@ -1,0 +1,15 @@
+2022-04-22 13:15:39.718 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-22 13:15:39.770 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-22 13:15:41.888 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-22 13:15:42.031 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 376 record in the grid
+2022-04-22 13:15:42.131 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon
+2022-04-22 13:15:42.131 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitDelete:1360 - Got the count before delete it
+2022-04-22 13:15:42.183 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 13:15:42.261 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 13:15:42.447 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 13:15:42.483 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:91 - Got the count before delete, Count is 1
+2022-04-22 13:15:42.506 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:118 - Data is available in the grid index
+2022-04-22 13:15:42.589 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:125 - Clicked the delete button
+2022-04-22 13:15:42.673 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:131 - Clicked the delete confirmation button
+2022-04-22 13:15:44.703 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:166 - Got the count before delete, Count is 0
+2022-04-22 13:15:44.703 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:187 - Unit delete is working

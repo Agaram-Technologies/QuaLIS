@@ -1,0 +1,30 @@
+2022-04-22 14:28:59.945 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-22 14:28:59.976 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-22 14:29:02.093 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-22 14:29:02.276 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 429 record in the grid
+2022-04-22 14:29:02.336 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon
+2022-04-22 14:29:02.367 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 14:29:02.409 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 14:29:02.624 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 14:29:02.647 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:219 - Got the count before edit the unit detail
+2022-04-22 14:29:02.668 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:249 - Old file is available at 1 index
+2022-04-22 14:29:02.765 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:255 - Clicked the edit icon
+2022-04-22 14:29:02.937 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:264 - cleared the old unit description
+2022-04-22 14:29:02.989 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:271 - cleared the old unit name
+2022-04-22 14:29:03.011 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:279 - cleared the old unit description
+2022-04-22 14:29:03.141 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:287 - Entered the new name
+2022-04-22 14:29:03.257 | INFO     | TestCoverage.TestCoverageUnit:unitEdit:297 - Clicked  the add submit button
+2022-04-22 14:29:10.425 | ERROR    | TestCoverage.TestCoverageUnit:unitEdit:349 - Edit popup is not closed
+2022-04-22 14:29:10.425 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1032 - expectedAuditAction is--->EDIT UNIT
+2022-04-22 14:29:10.426 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1036 - expectedComments is--->Unit Name: 100-> 200;
+2022-04-22 14:29:10.426 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1040 - expectedUserName is--->Admin Admin
+2022-04-22 14:29:10.426 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1045 - expectedUserRole is--->Admin
+2022-04-22 14:29:10.427 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1050 - expectedActionType is--->SYSTEM
+2022-04-22 14:29:10.427 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1055 - expectedModuleName is--->Base Master
+2022-04-22 14:29:10.427 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1060 - expectedFormName is--->Unit of Measurement
+2022-04-22 14:29:10.427 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitEdit:1065 - expectedEsignComments is--->
+2022-04-22 14:29:17.598 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:84 - Unable to Click the master icon
+2022-04-22 14:29:28.679 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:95 - Unable to click the User management icon
+2022-04-22 14:29:33.771 | ERROR    | Utility.ScreenNavigate:auditTrailPreCondition:111 - Unable to click the audit trail screen icon
+2022-04-22 14:29:42.830 | ERROR    | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:47 - Unable to get the count in the Audit trail screen
+2022-04-22 14:29:50.023 | ERROR    | Utility.ScreenNavigate:auditTrailPostCondition:132 - Unable to click the User management icon

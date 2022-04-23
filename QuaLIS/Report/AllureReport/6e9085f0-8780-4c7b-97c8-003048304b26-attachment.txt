@@ -1,0 +1,30 @@
+2022-04-22 13:09:43.238 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:793 - Number of folder and files before download 249
+2022-04-22 13:09:43.289 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-22 13:09:43.354 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-22 13:09:43.471 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-22 13:09:44.531 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:806 - Clicked the Download Excel button
+2022-04-22 13:09:44.538 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 0.0 seconds
+2022-04-22 13:09:45.047 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 0.5 seconds
+2022-04-22 13:09:45.558 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 1.0 seconds
+2022-04-22 13:09:46.070 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 1.5 seconds
+2022-04-22 13:09:46.583 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 2.0 seconds
+2022-04-22 13:09:47.098 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 2.5 seconds
+2022-04-22 13:09:47.609 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 3.0 seconds
+2022-04-22 13:09:48.116 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 3.5 seconds
+2022-04-22 13:09:48.625 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 4.0 seconds
+2022-04-22 13:09:49.139 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 4.5 seconds
+2022-04-22 13:09:49.651 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 5.0 seconds
+2022-04-22 13:09:50.159 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 5.5 seconds
+2022-04-22 13:09:50.668 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 6.0 seconds
+2022-04-22 13:09:51.178 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 6.5 seconds
+2022-04-22 13:09:51.689 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 7.0 seconds
+2022-04-22 13:09:52.206 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 7.5 seconds
+2022-04-22 13:09:52.723 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 8.0 seconds
+2022-04-22 13:09:53.233 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 8.5 seconds
+2022-04-22 13:09:53.736 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 9.0 seconds
+2022-04-22 13:09:54.252 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:919 - File is not downloaded till 9.5 seconds
+2022-04-22 13:09:56.832 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:938 - Clicked the basemaster icon
+2022-04-22 13:09:57.294 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-22 13:09:57.375 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-22 13:09:57.705 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-22 13:09:58.182 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

@@ -19,7 +19,6 @@ newName="200"
 
 newDescription="200ds"
 
-
 driver = BrowserOperation.launchLIMS()
 
 TestCoverageContainerType.containerTypeAdd(driver,oldName,oldDescription)
@@ -27,11 +26,6 @@ TestCoverageContainerType.containerTypeEdit(driver,oldName,oldDescription,"No",n
 TestCoverageContainerType.containerTypeDelete(driver,newName,newDescription,"Yes")
 TestCoverageContainerType.downloadPDF(driver)
 TestCoverageContainerType.downloadExcel(driver)
-
-
-
-
-
 
 
 

@@ -1,0 +1,5 @@
+2022-04-22 23:10:52.614 | ERROR    | Utility.ScreenNavigate:unit:35 - Unable to click the Master icon
+2022-04-22 23:11:12.670 | ERROR    | Utility.ScreenNavigate:unit:51 - Unable to click base master icon
+2022-04-22 23:11:32.706 | ERROR    | Utility.ScreenNavigate:unit:67 - unable to click unit icon
+2022-04-22 23:12:17.762 | ERROR    | TestCoverage.TestCoverageUnit:unitDelete:107 - Unable to get the count
+2022-04-22 23:13:24.941 | ERROR    | TestCoverage.TestCoverageUnit:unitDelete:182 - Unable to get the count

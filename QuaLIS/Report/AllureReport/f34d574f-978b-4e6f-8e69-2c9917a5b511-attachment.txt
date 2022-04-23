@@ -1,7 +1,0 @@
-before count-->6
-unit delete Matched at 1
-unit count is 1 200 100ds Yes
-1
-(//span[@data-tip='Delete'])[1]
-afterCount-->5
-Unit Delete is working properly
