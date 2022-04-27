@@ -43,43 +43,12 @@ newName="200"
 newDescription="200ds"
 
 
+driver=BrowserOperation.launchLIMS()
+#
+# TestCoverageStorageCondition.storageConditionAdd(driver,oldName,oldDescription,"yes")
+#
+# TestCoverageStorageCondition.storageConditionEdit(driver,oldName,oldDescription,"yes",newName,newDescription)
+#
+# TestCoverageStorageCondition.storageConditionDelete(driver,newName,newDescription,"yes")
 
-@pytest.fixture(scope="function")
-def preCondition():
-    global driver
-    driver = BrowserOperation.launchLIMS()
-
-
-def test_Add(preCondition):
-
-    TestCoverageStorageCondition.storageConditionAdd(driver, oldName, oldDescription, "yes")
-    BrowserOperation.refreshLogin(driver)
-
-
-
-
-def test_Edit():
-    TestCoverageStorageCondition.storageConditionEdit(driver, oldName, oldDescription, "No", newName, newDescription)
-    BrowserOperation.refreshLogin(driver)
-
-
-
-def test_Delete():
-    TestCoverageStorageCondition.storageConditionDelete(driver, newName, newDescription, "Yes")
-    BrowserOperation.refreshLogin(driver)
-
-    time.sleep(2)
-
-def test_exportEXCEL():
-
-    TestCoverageStorageCondition.downloadExcel(driver)
-    BrowserOperation.refreshLogin(driver)
-    time.sleep(2)
-
-def test_exportPDF():
-    TestCoverageStorageCondition.downloadPDF(driver)
-
-    BrowserOperation.refreshLogin(driver)
-    time.sleep(2)
-
-
+TestCoverageStorageCondition.auditTrailUnitAdd(driver,oldName,oldDescription,"yes")

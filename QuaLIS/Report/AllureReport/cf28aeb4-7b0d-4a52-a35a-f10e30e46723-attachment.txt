@@ -1,0 +1,20 @@
+2022-04-25 12:22:58.160 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:536 - Number of folder and files before download 271
+2022-04-25 12:22:58.200 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-25 12:22:58.244 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-25 12:22:58.392 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-25 12:22:59.472 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:549 - Clicked the Download Excel button
+2022-04-25 12:22:59.473 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:662 - File is not downloaded till 0.0 seconds
+2022-04-25 12:22:59.976 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:567 - Number of folder and files after download 272
+2022-04-25 12:22:59.976 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:569 - File is downloaded after 0.5 seconds
+2022-04-25 12:22:59.976 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:587 - The new downloaded file name is Export (68).xlsx
+2022-04-25 12:22:59.993 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:604 - The unit name header is displayed properly
+2022-04-25 12:22:59.993 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:609 - The unit description header is displayed properly
+2022-04-25 12:22:59.993 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:614 - The unit default status header is displaying properly
+2022-04-25 12:23:00.000 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:624 - The number of data is matching with Excel
+2022-04-25 12:23:00.004 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:631 - db7
+2022-04-25 12:23:00.020 | ERROR    | Database.DBUnit:unitExportEXCELDBCompare:45 - The exported record is not matching with database
+2022-04-25 12:23:02.086 | INFO     | TestCoverage.TestCoverageUnit:downloadExcel:681 - Clicked the basemaster icon
+2022-04-25 12:23:02.331 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-25 12:23:02.414 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-25 12:23:02.628 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-25 12:23:02.799 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

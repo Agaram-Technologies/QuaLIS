@@ -69,6 +69,8 @@ def launchLIMS():
 
         logger.error(result)
 
+    time.sleep(5)
+
 
     try:
         BasicOperation.sendKeysXpath(driver, objectRepository.get("login", "loginid"),

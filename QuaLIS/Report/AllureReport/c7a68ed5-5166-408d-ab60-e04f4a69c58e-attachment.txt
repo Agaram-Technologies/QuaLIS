@@ -1,0 +1,8 @@
+2022-04-25 12:24:10.003 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-25 12:24:10.024 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-25 12:24:10.061 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-25 12:24:10.126 | INFO     | TestCoverage.TestCoverageUnit:unitFilter:1110 - clicked the filter icon
+2022-04-25 12:24:10.361 | INFO     | TestCoverage.TestCoverageUnit:unitFilter:1117 - Clicked filter drop down
+2022-04-25 12:24:10.396 | INFO     | TestCoverage.TestCoverageUnit:unitFilter:1124 - selected contains
+2022-04-25 12:24:10.446 | INFO     | TestCoverage.TestCoverageUnit:unitFilter:1138 - Entered name value
+2022-04-25 12:24:10.489 | INFO     | TestCoverage.TestCoverageUnit:unitFilter:1145 - Clicked filter find buttonj

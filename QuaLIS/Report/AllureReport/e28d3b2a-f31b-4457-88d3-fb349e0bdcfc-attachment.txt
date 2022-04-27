@@ -1,0 +1,11 @@
+2022-04-25 12:22:37.763 | INFO     | Utility.BrowserOperation:launchLIMS:30 - Browser Launched
+2022-04-25 12:22:38.818 | INFO     | Utility.BrowserOperation:launchLIMS:52 - Hit the link
+2022-04-25 12:22:38.864 | INFO     | Utility.BrowserOperation:launchLIMS:77 - Entered the login id
+2022-04-25 12:22:38.952 | INFO     | Utility.BrowserOperation:launchLIMS:92 - Entered the password detail
+2022-04-25 12:22:40.001 | INFO     | Utility.BrowserOperation:launchLIMS:102 - Clicked the login button
+2022-04-25 12:22:40.220 | INFO     | Utility.BrowserOperation:launchLIMS:114 - Launch lims - Clicked the pin icon
+2022-04-25 12:22:42.534 | INFO     | Utility.JDBC:name:133 - It accept the duplicate entry in db
+2022-04-25 12:22:42.869 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-25 12:22:42.954 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-25 12:22:43.168 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-25 12:22:43.313 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

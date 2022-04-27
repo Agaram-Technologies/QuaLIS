@@ -59,8 +59,6 @@ def retunOneValue(query):
 
     return value
 
-retunOneValue("select nunitcode from unit where nunitcode=1")
-
 
 
 
@@ -115,7 +113,7 @@ def name(name):
 
     cursor = dbconnect.cursor()
 
-    query2 = "select sunitname from unit where sunitname='2000'"
+    query2 = "select sunitname from unit where sunitname='{}'".format(name)
 
     cursor.execute(query2)
 
@@ -126,7 +124,7 @@ def name(name):
     while row:
         a=row[0]
         row = cursor.fetchone()
-        if a=="2000":
+        if a==name:
             print(a)
             i=i+1
 
@@ -158,5 +156,3 @@ def unitExcel():
         row2 = cursor.fetchone()
 
     return  row2
-
-retunOneValue("select nunitcode from unit where nunitcode=1")

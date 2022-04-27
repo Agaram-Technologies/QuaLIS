@@ -1,0 +1,92 @@
+2022-04-25 12:23:40.312 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-25 12:23:40.351 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-25 12:23:42.445 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-25 12:23:42.554 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 111 record in the grid
+2022-04-25 12:23:42.585 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon
+2022-04-25 12:23:42.609 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-25 12:23:42.642 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-25 12:23:42.766 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-25 12:23:42.833 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:92 - Got the count before delete, Count is 8
+2022-04-25 12:23:42.852 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:119 - Data is available in the grid index
+2022-04-25 12:23:42.898 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:126 - Clicked the delete button
+2022-04-25 12:23:42.978 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:132 - Clicked the delete confirmation button
+2022-04-25 12:23:45.012 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:167 - Got the count before delete, Count is 7
+2022-04-25 12:23:45.013 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:188 - Unit delete is working
+2022-04-25 12:23:45.020 | INFO     | TestCoverage.TestCoverageUnit:unitDelete:193 - Delete is updated in the database, Now nstatus is -1
+2022-04-25 12:23:50.140 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:79 - Clicked the master icon
+2022-04-25 12:23:50.164 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:92 - clicked the User management icon
+2022-04-25 12:23:52.274 | INFO     | Utility.ScreenNavigate:auditTrailPreCondition:108 - clicked the Audit trail icon
+2022-04-25 12:23:52.373 | INFO     | TestCoverage.TestCoverageAudittrail:auditTrailRecordCount:26 - The count is fetched, it shows 112 record in the grid
+2022-04-25 12:23:52.434 | INFO     | Utility.ScreenNavigate:auditTrailPostCondition:130 - clicked the User management icon
+2022-04-25 12:23:52.434 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitDelete:902 - After count is 112
+2022-04-25 12:23:52.443 | INFO     | TestCoverage.TestCoverageUnit:auditTrailUnitDelete:919 - Audit trail is captured
+2022-04-25 12:23:52.460 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1191 - Audit action is properly mentioned in UI
+2022-04-25 12:23:52.460 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1192 - Expected--->DELETE UNIT
+2022-04-25 12:23:52.460 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1193 - Actual  --->DELETE UNIT
+2022-04-25 12:23:52.463 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1205 - Audit action is properly mentioned in db
+2022-04-25 12:23:52.463 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1206 - Expected--->DELETE UNIT
+2022-04-25 12:23:52.463 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1207 - Actual  --->DELETE UNIT
+2022-04-25 12:23:52.463 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1214 - Audit action is same in the db and ui
+2022-04-25 12:23:52.463 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1215 - actualAuditActionUI--->DELETE UNIT
+2022-04-25 12:23:52.463 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1216 - actualAuditActionDB  --->DELETE UNIT
+2022-04-25 12:23:52.482 | ERROR    | TestCoverage.TestCoverageUnit:auditTrail:1229 - Audit comment is not properly mentioned in UI
+2022-04-25 12:23:52.482 | ERROR    | TestCoverage.TestCoverageUnit:auditTrail:1230 - Expected--->Unit Name: cm;Description: centi meter;Default Status: No;	
+2022-04-25 12:23:52.482 | ERROR    | TestCoverage.TestCoverageUnit:auditTrail:1231 - Actual  --->Unit Name: Milli meter;Description: centi meter;Default Status: No;
+2022-04-25 12:23:52.486 | ERROR    | TestCoverage.TestCoverageUnit:auditTrail:1242 - Audit action is not properly mentioned db
+2022-04-25 12:23:52.486 | ERROR    | TestCoverage.TestCoverageUnit:auditTrail:1243 - Expected--->Unit Name: cm;Description: centi meter;Default Status: No;	
+2022-04-25 12:23:52.486 | ERROR    | TestCoverage.TestCoverageUnit:auditTrail:1244 - Actual  --->Unit Name: Milli meter;Description: centi meter;Default Status: No;
+2022-04-25 12:23:52.486 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1247 - user role is same in the db and ui
+2022-04-25 12:23:52.486 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1248 - actualCommentsUI--->Unit Name: Milli meter;Description: centi meter;Default Status: No;
+2022-04-25 12:23:52.487 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1249 - actualCommentDb  --->Unit Name: Milli meter;Description: centi meter;Default Status: No;
+2022-04-25 12:23:52.509 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1258 - user name is properly mentioned in UI
+2022-04-25 12:23:52.509 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1259 - Expected--->Admin Admin
+2022-04-25 12:23:52.509 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1260 - Actual  --->Admin Admin
+2022-04-25 12:23:52.529 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1269 - user role is properly mentioned in UI
+2022-04-25 12:23:52.530 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1270 - Expected--->Admin
+2022-04-25 12:23:52.530 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1271 - Actual  --->Admin
+2022-04-25 12:23:52.534 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1283 - user role is properly mentioned in db
+2022-04-25 12:23:52.534 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1284 - Expected--->Admin
+2022-04-25 12:23:52.535 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1285 - Actual  --->Admin
+2022-04-25 12:23:52.535 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1294 - user role is same in the db and ui
+2022-04-25 12:23:52.535 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1295 - actualUserRoleUI--->Admin
+2022-04-25 12:23:52.535 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1296 - actualUserRoleDB  --->Admin
+2022-04-25 12:23:52.556 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1306 - action type is properly mentioned in UI
+2022-04-25 12:23:52.556 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1307 - Expected--->SYSTEM
+2022-04-25 12:23:52.557 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1308 - Actual  --->SYSTEM
+2022-04-25 12:23:52.560 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1320 - action type is properly mentioned in db
+2022-04-25 12:23:52.560 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1321 - Expected--->SYSTEM
+2022-04-25 12:23:52.560 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1322 - Actual  --->SYSTEM
+2022-04-25 12:23:52.560 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1330 - action type is same in the db and ui
+2022-04-25 12:23:52.560 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1331 - actualActionTypeDB--->SYSTEM
+2022-04-25 12:23:52.560 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1332 - actualActionTypeUI  --->SYSTEM
+2022-04-25 12:23:52.587 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1341 - Expected--->Base Master
+2022-04-25 12:23:52.587 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1342 - Actual  --->Base Master
+2022-04-25 12:23:52.587 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1343 - Module name is properly mentioned in UI
+2022-04-25 12:23:52.590 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1356 - module is properly mentioned in db
+2022-04-25 12:23:52.590 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1357 - Expected--->SYSTEM
+2022-04-25 12:23:52.590 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1358 - Actual  --->Base Master
+2022-04-25 12:23:52.590 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1365 - module is same in the db and ui
+2022-04-25 12:23:52.590 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1366 - actualModuleNameDB--->Base Master
+2022-04-25 12:23:52.590 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1367 - actualModuleNameUI  --->Base Master
+2022-04-25 12:23:52.607 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1376 - form name is properly mentioned in UI
+2022-04-25 12:23:52.608 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1377 - Expected--->Base Master
+2022-04-25 12:23:52.608 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1378 - Actual  --->Unit of Measurement
+2022-04-25 12:23:52.614 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1389 - form is properly mentioned in db
+2022-04-25 12:23:52.614 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1391 - Expected--->Unit of Measurement
+2022-04-25 12:23:52.614 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1392 - Actual  --->Unit of Measurement
+2022-04-25 12:23:52.614 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1401 - form is same in the db and ui
+2022-04-25 12:23:52.615 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1402 - actualFormNameUI--->Unit of Measurement
+2022-04-25 12:23:52.615 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1403 - actualFormNameDB  --->Unit of Measurement
+2022-04-25 12:23:52.635 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1412 - Esign comment name is properly mentioned in UI
+2022-04-25 12:23:52.636 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1413 - Expected--->
+2022-04-25 12:23:52.636 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1414 - Actual  --->
+2022-04-25 12:23:52.641 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1426 - Esign comment is properly mentioned in db
+2022-04-25 12:23:52.641 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1427 - Expected--->
+2022-04-25 12:23:52.641 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1428 - Actual  --->
+2022-04-25 12:23:52.641 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1435 - Esign comment is same in the db and ui
+2022-04-25 12:23:52.641 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1436 - actualEsignCommentsDB--->
+2022-04-25 12:23:52.642 | INFO     | TestCoverage.TestCoverageUnit:auditTrail:1437 - actualEsignCommentsUI  --->
+2022-04-25 12:23:52.951 | INFO     | Utility.BrowserOperation:refreshLogin:132 - Refresh-->Entered Login id
+2022-04-25 12:23:53.043 | INFO     | Utility.BrowserOperation:refreshLogin:140 - Refresh-->Entered password id
+2022-04-25 12:23:53.269 | INFO     | Utility.BrowserOperation:refreshLogin:159 - Refresh-->Clicked the login button
+2022-04-25 12:23:53.427 | INFO     | Utility.BrowserOperation:refreshLogin:167 - Refresh Login-->, clicked pin icon

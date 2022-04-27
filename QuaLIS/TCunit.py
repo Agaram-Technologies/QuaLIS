@@ -1,27 +1,26 @@
+from datetime import datetime
+
 from loguru import logger
 
 from ObjectRepository import ElementAuditTrail
 from TestCoverage import TestCoverageUnit, TestCoverageAudittrail
 from Utility import BrowserOperation, JDBC
 
+time=datetime.now()
 
-oldName="cm"
 
-oldDescription="centi meter"
+oldName= str(time)
 
-newName="mm"
+oldDescription="centimeter"
+
+newName=oldName+"d"
+
 
 newDescription="Milli meter"
 
 driver=BrowserOperation.launchLIMS()
 
-TestCoverageUnit.auditTrailUnitAdd(driver,oldName,oldDescription,"No")
-
-quit()
-
-TestCoverageUnit.auditTrailUnitEdit(driver, oldName, oldDescription, newName, newDescription, "oldDefaultStatus")
-
-TestCoverageUnit.auditTrailUnitDelete(driver, oldName, oldDescription, "No")
+TestCoverageUnit.auditTrailUnitAdd(driver, "temperature", oldDescription, "No")
 
 
 

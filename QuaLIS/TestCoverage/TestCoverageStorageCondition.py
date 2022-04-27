@@ -351,7 +351,7 @@ def storageConditionEdit(driver, oldName, oldDescription, oldDefaultStatus, newN
     element.click()
 
 
-def auditTrailUnitAdd(driver, name, description, defaultStatus):
+def auditTrailtorageConditionAdd(driver, name, description, defaultStatus):
     ResultCase1 = "Unexecuted"
 
     beforeCount = TestCoverageAudittrail.auditTrailRecordCount(driver)
@@ -361,7 +361,7 @@ def auditTrailUnitAdd(driver, name, description, defaultStatus):
 
     userName = JDBC.userName()
 
-    output = unitAdd(driver, name, description, "No")
+    output = storageConditionAdd(driver, name, description, "No")
 
     configDriver = ConfigParser()
     configDriver.read(BasicOperation.projectDirectory() + "\\config.ini")
@@ -806,7 +806,7 @@ def auditTrailUnitEdit(driver, oldName, oldDescription, newName, newDescription,
                         "userName": "Carl Dolman", "userRole": "Admin", "ActionType": "SYSTEM",
                         "ModuleName": "Base Master", "FormName": "Unit of Measurement", "esignComments": ""}
 
-    unitEdit(driver, oldName, oldDescription, "No", newName, newDescription)
+    storageConditionEdit(driver, oldName, oldDescription, "No", newName, newDescription)
 
     BrowserOperation.refreshLogin(driver)
 
@@ -1032,7 +1032,7 @@ def auditTrailUnitDelete(driver, name, description, defaultStatus):
                         "userName": "Carl Dolman", "userRole": "Admin", "ActionType": "SYSTEM",
                         "ModuleName": "Base Master", "FormName": "Unit of Measurement", "esignComments": ""}
 
-    unitDelete(driver, name, description, "No")
+    storageConditionDelete(driver, name, description, "No")
 
     BrowserOperation.refreshLogin(driver)
 
@@ -1213,3 +1213,292 @@ def auditTrailUnitDelete(driver, name, description, defaultStatus):
 
                 else:
                     print("Esign comment  is not displaying properly")
+
+
+
+def auditTrail(driver,expectedAuditTrailResult):
+
+    expectedAuditAction=expectedAuditTrailResult.get("expectedAuditAction")
+
+
+    expectedEsignComments=expectedAuditTrailResult.get("expectedEsignComments")
+
+    expectedFormName = expectedAuditTrailResult.get("expectedFormName")
+
+
+    expectedModuleName = expectedAuditTrailResult.get("expectedModuleName")
+
+
+    expectedActionType = expectedAuditTrailResult.get("expectedActionType")
+
+
+    expectedUserRole = expectedAuditTrailResult.get("expectedUserRole")
+
+
+
+    expectedUserName = expectedAuditTrailResult.get("expectedUserName")
+
+
+    expectedComments = expectedAuditTrailResult.get("expectedComments")
+
+
+
+    actualAuditActionUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[3]").text
+
+    if actualAuditActionUI == expectedAuditAction:
+
+        logger.info("Audit action is properly mentioned in UI")
+        logger.info("Expected--->" + expectedAuditAction)
+        logger.info("Actual  --->" + actualAuditActionUI)
+
+    else:
+        logger.error("Audit action is not properly mentioned in UI")
+        logger.error("Expected--->" + expectedAuditAction)
+        logger.error("Actual  --->" + actualAuditActionUI)
+
+    actualAuditActionDB = JDBC.retunOneValue(
+        "select sauditaction from auditaction where nauditcode=(select COUNT(*) from auditaction )")
+
+    if actualAuditActionDB == expectedAuditAction:
+
+        logger.info("Audit action is properly mentioned in db")
+        logger.info("Expected--->" + expectedAuditAction)
+        logger.info("Actual  --->" + actualAuditActionDB)
+    else:
+        logger.error("Audit action is not properly mentioned db")
+        logger.error("Expected--->" + expectedAuditAction)
+        logger.error("Actual  --->" + actualAuditActionDB)
+
+    if actualAuditActionUI == actualAuditActionDB:
+        logger.info("Audit action is same in the db and ui")
+        logger.info("actualAuditActionUI--->" + actualAuditActionUI)
+        logger.info("actualAuditActionDB  --->" + actualAuditActionDB)
+    else:
+        logger.error("Audit action is not same in the db and ui")
+        logger.error("actualAuditActionUI--->" + actualAuditActionUI)
+        logger.error("actualAuditActionDB  --->" + actualAuditActionDB)
+
+    actualCommentsUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[4]").text
+
+    if actualCommentsUI == expectedComments:
+        logger.info("Audit comment is properly mentioned in UI")
+        logger.info("Expected--->" + expectedComments)
+        logger.info("Actual  --->" + actualCommentsUI)
+    else:
+        logger.error("Audit comment is not properly mentioned in UI")
+        logger.error("Expected--->" + expectedComments)
+        logger.error("Actual  --->" + actualCommentsUI)
+
+    actualCommentDb = JDBC.retunOneValue(
+        "select scomments from auditcomments where nauditcode=(select COUNT(*)from auditaction)")
+
+    if actualCommentDb == expectedComments:
+
+        logger.info("Audit comment is properly mentioned in db")
+        logger.info("Expected--->" + expectedComments)
+        logger.info("Actual  --->" + actualCommentDb)
+    else:
+        logger.error("Audit action is not properly mentioned db")
+        logger.error("Expected--->" + expectedComments)
+        logger.error("Actual  --->" + actualCommentDb)
+
+    if actualCommentsUI == actualCommentDb:
+        logger.info("user role is same in the db and ui")
+        logger.info("actualCommentsUI--->" + actualCommentsUI)
+        logger.info("actualCommentDb  --->" + actualCommentDb)
+    else:
+        logger.error("user role is not same in the db and ui")
+        logger.error("actualCommentsUI--->" + actualCommentsUI)
+        logger.error("actualCommentDb  --->" + actualCommentDb)
+
+    actualUserNameUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[5]").text
+
+    if actualUserNameUI == expectedUserName:
+        logger.info("user name is properly mentioned in UI")
+        logger.info("Expected--->" + expectedUserName)
+        logger.info("Actual  --->" + actualUserNameUI)
+    else:
+        logger.error("user name is not properly mentioned in UI")
+        logger.error("Expected--->" + expectedUserName)
+        logger.error("Actual  --->" + actualUserNameUI)
+
+    actualUserRoleUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[6]").text
+
+    if actualUserRoleUI == expectedUserRole:
+        logger.info("user role is properly mentioned in UI")
+        logger.info("Expected--->" + expectedUserRole)
+        logger.info("Actual  --->" + actualUserRoleUI)
+
+    else:
+        logger.error("Audit action is not properly mentioned in UI")
+        logger.error("Expected--->" + expectedUserRole)
+        logger.error("Actual  --->" + actualUserRoleUI)
+
+    queryr = "select suserrolename from userrole where nuserrolecode=(select nuserrole from auditaction where nauditcode=(select COUNT(*) from auditaction ))"
+
+    actualUserRoleDB = JDBC.retunOneValue(queryr)
+
+    if actualUserRoleDB == expectedUserRole:
+        logger.info("user role is properly mentioned in db")
+        logger.info("Expected--->" + expectedUserRole)
+        logger.info("Actual  --->" + actualUserRoleDB)
+
+
+    else:
+        logger.error("user role is not properly mentioned db")
+        logger.info("Expected--->" + expectedUserRole)
+        logger.info("Actual  --->" + actualUserRoleDB)
+
+    if actualUserRoleUI == actualUserRoleDB:
+        logger.info("user role is same in the db and ui")
+        logger.info("actualUserRoleUI--->" + actualUserRoleUI)
+        logger.info("actualUserRoleDB  --->" + actualUserRoleDB)
+
+    else:
+        logger.error("user role is not same in the db and ui")
+        logger.error("actualUserRoleUI--->" + actualUserRoleUI)
+        logger.error("actualUserRoleDB  --->" + actualUserRoleDB)
+
+    actualActionTypeUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[7]").text
+
+    if actualActionTypeUI == expectedActionType:
+        logger.info("action type is properly mentioned in UI")
+        logger.info("Expected--->" + expectedActionType)
+        logger.info("Actual  --->" + actualActionTypeUI)
+
+    else:
+        logger.error("action type is not properly mentioned in UI")
+        logger.info("Expected--->" + expectedActionType)
+        logger.info("Actual  --->" + actualActionTypeUI)
+
+    actionTypeQuery = "select sactiontype from auditaction where nauditcode=(select COUNT(*) from auditaction )"
+
+    actualActionTypeDB = JDBC.retunOneValue(actionTypeQuery)
+
+    if actualActionTypeDB == expectedActionType:
+        logger.info("action type is properly mentioned in db")
+        logger.info("Expected--->" + expectedActionType)
+        logger.info("Actual  --->" + actualActionTypeDB)
+
+    else:
+        logger.error("action type is not properly mentioned db")
+        logger.error("Expected--->" + expectedActionType)
+        logger.error("Actual  --->" + actualActionTypeDB)
+
+    if actualActionTypeDB == actualActionTypeUI:
+        logger.info("action type is same in the db and ui")
+        logger.info("actualActionTypeDB--->" + actualActionTypeDB)
+        logger.info("actualActionTypeUI  --->" + actualActionTypeUI)
+    else:
+        logger.error("action type is not same in the db and ui")
+        logger.error("actualActionTypeDB--->" + actualActionTypeDB)
+        logger.error("actualActionTypeUI  --->" + actualActionTypeUI)
+
+    actualModuleNameUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[8]").text
+
+    if actualModuleNameUI == expectedModuleName:
+        logger.info("Expected--->" + expectedModuleName)
+        logger.info("Actual  --->" + actualModuleNameUI)
+        logger.info("Module name is properly mentioned in UI")
+
+    else:
+        logger.error("Module name  is not properly mentioned in UI")
+        logger.error("Expected--->" + expectedModuleName)
+        logger.error("Actual  --->" + actualModuleNameUI)
+
+    moduleNameQuery = "select smodulename from qualismodule where nmodulecode=(select nmodulecode from auditaction where nauditcode=(select COUNT(*) from auditaction ))"
+
+    actualModuleNameDB = JDBC.retunOneValue(moduleNameQuery)
+
+    if actualModuleNameDB == expectedModuleName:
+
+        logger.info("module is properly mentioned in db")
+        logger.info("Expected--->" + expectedActionType)
+        logger.info("Actual  --->" + actualModuleNameDB)
+    else:
+        logger.error("module is not properly mentioned db")
+        logger.error("Expected--->" + expectedActionType)
+        logger.error("Actual  --->" + actualModuleNameDB)
+
+    if actualModuleNameDB == actualModuleNameUI:
+        logger.info("module is same in the db and ui")
+        logger.info("actualModuleNameDB--->" + actualModuleNameDB)
+        logger.info("actualModuleNameUI  --->" + actualModuleNameUI)
+    else:
+        logger.error("module is not same in the db and ui")
+        logger.error("actualModuleNameDB--->" + actualModuleNameDB)
+        logger.error("actualModuleNameUI  --->" + actualModuleNameUI)
+
+    actualFormNameUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[9]").text
+
+    if actualFormNameUI == expectedFormName:
+        logger.info("form name is properly mentioned in UI")
+        logger.info("Expected--->" + expectedModuleName)
+        logger.info("Actual  --->" + actualFormNameUI)
+
+    else:
+        logger.error("form name  is not properly mentioned in UI")
+        logger.error("Expected--->" + expectedModuleName)
+        logger.error("Actual  --->" + actualFormNameUI)
+
+    formNameQuery = "select sformname from qualisforms where nformcode=(select nformcode from auditaction where nauditcode=(select COUNT(*) from auditaction )) and nformcode<>-2"
+    actualFormNameDB = JDBC.retunOneValue(formNameQuery)
+
+    if actualFormNameDB == expectedFormName:
+        logger.info("form is properly mentioned in db")
+
+        logger.info("Expected--->" + expectedFormName)
+        logger.info("Actual  --->" + actualFormNameDB)
+
+    else:
+        logger.error("form is not properly mentioned db")
+
+        logger.error("Expected--->" + expectedFormName)
+        logger.error("Actual  --->" + actualFormNameDB)
+
+    if actualFormNameUI == actualFormNameDB:
+        logger.info("form is same in the db and ui")
+        logger.info("actualFormNameUI--->" + actualFormNameUI)
+        logger.info("actualFormNameDB  --->" + actualFormNameDB)
+    else:
+        logger.error("form is not same in the db and ui")
+        logger.error("actualFormNameUI--->" + actualFormNameUI)
+        logger.error("actualFormNameDB  --->" + actualFormNameDB)
+
+    actualEsignCommentsUI = driver.find_element(By.XPATH, "//tbody[@role='presentation']/tr[2]/td[10]").text
+
+    if actualEsignCommentsUI == expectedEsignComments:
+        logger.info("Esign comment name is properly mentioned in UI")
+        logger.info("Expected--->" + expectedEsignComments)
+        logger.info("Actual  --->" + actualEsignCommentsUI)
+
+    else:
+        logger.error("Esign comment name  is not properly mentioned in UI")
+        logger.error("Expected--->" + expectedEsignComments)
+        logger.error("Actual  --->" + actualEsignCommentsUI)
+
+    esignCommentQuery = "select sreason from auditaction where nauditcode=(select COUNT(*) from auditaction ) order by 1 desc"
+
+    actualEsignCommentsDB = JDBC.retunOneValue(esignCommentQuery)
+
+    if actualEsignCommentsDB == expectedEsignComments:
+        logger.info("Esign comment is properly mentioned in db")
+        logger.info("Expected--->" + expectedEsignComments)
+        logger.info("Actual  --->" + actualEsignCommentsDB)
+    else:
+        logger.error("Esign comment is not properly mentioned db")
+        logger.info("Expected--->" + expectedEsignComments)
+        logger.info("Actual  --->" + actualEsignCommentsDB)
+
+    if actualEsignCommentsDB == actualEsignCommentsUI:
+        logger.info("Esign comment is same in the db and ui")
+        logger.info("actualEsignCommentsDB--->" + actualEsignCommentsDB)
+        logger.info("actualEsignCommentsUI  --->" + actualEsignCommentsUI)
+
+    else:
+        logger.error("Esign comment is not same in the db and ui")
+        logger.error("actualEsignCommentsDB--->" + actualEsignCommentsDB)
+        logger.error("actualEsignCommentsUI  --->" + actualEsignCommentsUI)
+
+
+

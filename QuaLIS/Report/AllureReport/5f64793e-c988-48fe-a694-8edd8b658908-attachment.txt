@@ -1,0 +1,11 @@
+Admin
+Admin
+(//span[@data-tip='Delete'])[1]
+-1
+DELETE UNIT
+Unit Name: Milli meter;Description: centi meter;Default Status: No;
+Admin
+SYSTEM
+Base Master
+Unit of Measurement
+

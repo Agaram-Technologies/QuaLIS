@@ -1,0 +1,12 @@
+2022-04-25 12:23:53.473 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-25 12:23:53.510 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-25 12:23:53.654 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-25 12:23:53.801 | INFO     | Utility.ExceptionHandling:exceptionClick:10 - Clicked the Unit add button
+2022-04-25 12:23:54.062 | INFO     | Utility.ExceptionHandling:exceptionClick:10 - Clicked the add submit button
+2022-04-25 12:23:58.177 | INFO     | Utility.ScreenNavigate:unit:30 - Clicked the master icon
+2022-04-25 12:23:58.199 | INFO     | Utility.ScreenNavigate:unit:46 - clicked base master icon
+2022-04-25 12:23:58.238 | INFO     | Utility.ScreenNavigate:unit:62 - clicked the unit icon
+2022-04-25 12:23:58.317 | INFO     | Utility.ExceptionHandling:exceptionClick:10 - Clicked the Unit add button
+2022-04-25 12:23:58.510 | INFO     | Utility.ExceptionHandling:exceptionClick:10 - Clicked the add submit button
+2022-04-25 12:24:09.889 | INFO     | TestCoverage.TestCoverageUnit:unitDuplicate:1021 - it not accept duplicate records
+2022-04-25 12:24:09.963 | INFO     | TestCoverage.TestCoverageUnit:unitDuplicate:1026 - Clicked the cancel button to close the popup
